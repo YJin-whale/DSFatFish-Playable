@@ -1,0 +1,2760 @@
+{
+  "ok": true,
+  "tool": "tools/qa_v6_run.mjs",
+  "toolVersion": 6,
+  "label": "final-uxfix",
+  "generatedAt": "2026-11-18T15:42:33.524Z",
+  "startedAt": "2026-11-18T15:40:44.081Z",
+  "durationMs": 109443,
+  "exitCode": 0,
+  "indexHtml": {
+    "path": "C:\\Users\\admin\\Desktop\\FatFish-Playable\\index.html",
+    "bytes": 9089288,
+    "mtime": "2026-11-18T15:35:23.635Z",
+    "sha256": "b20bf9c75e248065a620ed96d49a1acce5783ea26241f02258a9e805c5e4b9f6"
+  },
+  "host": {
+    "platform": "win32",
+    "node": "v24.21.0",
+    "arch": "x64",
+    "chromeHint": "C:\\Users\\admin\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe",
+    "exists": true
+  },
+  "caps": {
+    "version": "6.0.0",
+    "audio": {
+      "ready": true,
+      "playing": false,
+      "unlocked": false,
+      "currentId": "builtin:bgm_canned_picasso",
+      "currentName": "Let Me Go（共创版）",
+      "currentArtist": "罐装毕加索",
+      "volume": 0.55,
+      "sfxVolume": 0.85,
+      "level": 0,
+      "bass": 0,
+      "pulse": 0,
+      "dance": 0,
+      "trackCount": 2,
+      "builtinCount": 2,
+      "uploadedCount": 0,
+      "uploadsLoaded": true,
+      "dbReady": true,
+      "fileInput": true,
+      "error": "",
+      "tracks": [
+        {
+          "id": "builtin:bgm_canned_picasso",
+          "name": "Let Me Go（共创版）",
+          "artist": "罐装毕加索",
+          "kind": "builtin"
+        },
+        {
+          "id": "builtin:bgm_xingluoluo",
+          "name": "Let me go",
+          "artist": "星落落oi",
+          "kind": "builtin"
+        }
+      ]
+    },
+    "api": {
+      "musicState": "function",
+      "musicToggle": "function",
+      "musicPlay": "function",
+      "musicNext": "function",
+      "setMusicVolume": "function",
+      "setSfxVolume": "function",
+      "musicUploadTest": "function",
+      "removeUploadedMusic": "function",
+      "musicUnlock": "function",
+      "setSettingsTab": "function",
+      "danceLevel": "function",
+      "musicDbCount": "function",
+      "audioSliderApply": "function",
+      "settingsTabs": "function"
+    },
+    "save": {
+      "musicVol": 0.55,
+      "sfxVol": 0.85,
+      "musicOn": true,
+      "musicTrack": "builtin:bgm_canned_picasso"
+    }
+  },
+  "v5Baseline": {
+    "label": "v6.1-baseline",
+    "generatedAt": "2026-11-18T15:40:39.272Z",
+    "summary": {
+      "total": 50,
+      "pass": 50,
+      "pending": 0,
+      "fail": 0,
+      "warn": 0
+    },
+    "exitCode": 0,
+    "indexHtml": {
+      "path": "C:\\Users\\admin\\Desktop\\FatFish-Playable\\index.html",
+      "bytes": 9089288,
+      "mtime": "2026-11-18T15:35:23.635Z"
+    }
+  },
+  "keyValues": [
+    {
+      "item": "VERSION",
+      "value": "6.0.0",
+      "scene": "caps"
+    },
+    {
+      "item": "内置曲目 / 曲目总数",
+      "value": "2 首内置 / 2 首列表",
+      "scene": "caps"
+    },
+    {
+      "item": "内置曲目",
+      "value": "Let Me Go（共创版） / Let me go",
+      "scene": "caps"
+    },
+    {
+      "item": "URL 音量 ?musicVol=0.42",
+      "value": 0.42,
+      "scene": "settings-url-volume"
+    },
+    {
+      "item": "URL 音效 ?sfxVol=0.9",
+      "value": 0.9,
+      "scene": "settings-url-volume"
+    },
+    {
+      "item": "URL 音量落盘",
+      "value": "0.42 / 0.9",
+      "scene": "settings-url-volume"
+    },
+    {
+      "item": "audioSliderApply('musicVol',0.27)",
+      "value": 0.27,
+      "scene": "settings-slider"
+    },
+    {
+      "item": "连续 6 档音量实测",
+      "value": "0.13 / 0.27 / 0.31 / 0.5 / 0.666 / 0.9",
+      "scene": "settings-slider"
+    },
+    {
+      "item": "setMusicVolume(0.31) / setSfxVolume(0.9)",
+      "value": "0.31 / 0.9",
+      "scene": "settings-slider"
+    },
+    {
+      "item": "播放状态",
+      "value": "playing=true / current=Let Me Go（共创版）",
+      "scene": "play"
+    },
+    {
+      "item": "danceLevel()（analyser 出数耗时）",
+      "value": "0.9（200ms）",
+      "scene": "play",
+      "note": "level=0.176 bass=0.573 pulse=0.943"
+    },
+    {
+      "item": "播放 error",
+      "value": "（空，无解码/播放报错）",
+      "scene": "play"
+    },
+    {
+      "item": "musicToggle() 暂停 / 恢复",
+      "value": "playing=false → 恢复后 true",
+      "scene": "pause"
+    },
+    {
+      "item": "musicNext() 切歌",
+      "value": "Let Me Go（共创版） → Let me go",
+      "scene": "next-track"
+    },
+    {
+      "item": "内置曲2 名称",
+      "value": "Let me go / 星落落oi",
+      "scene": "next-track"
+    },
+    {
+      "item": "跨界面 playing|volume",
+      "value": "title true|0.44 → launch true|0.44 → flight true|0.44（screen=flight）",
+      "scene": "cross-keep"
+    },
+    {
+      "item": "飞行中 danceLevel()",
+      "value": 0.649,
+      "scene": "cross-keep"
+    },
+    {
+      "item": "上传后曲目数 / 上传数",
+      "value": "3 / 1",
+      "scene": "upload-add",
+      "note": "id=user:test:1795016515315"
+    },
+    {
+      "item": "musicDbCount()（重读 IndexedDB）",
+      "value": 1,
+      "scene": "upload-add"
+    },
+    {
+      "item": "上传曲目播放 danceLevel()",
+      "value": 0.009,
+      "scene": "upload-add"
+    },
+    {
+      "item": "删除后 uploadedCount / dbCount",
+      "value": "0 / 0",
+      "scene": "upload-remove"
+    },
+    {
+      "item": "跨启动持久化（写入轮）",
+      "value": "uploaded=1 / vol=0.37 / savedTrack=user:test:1795016528495",
+      "scene": "persist-write"
+    },
+    {
+      "item": "跨启动持久化（重开轮）",
+      "value": "uploaded=1 / trackCount=3 / vol=0.37 / db=1",
+      "scene": "persist-read"
+    },
+    {
+      "item": "移动端 390x844 音频页",
+      "value": "sliders=2 / volume=0.66 / viewport=390x844",
+      "scene": "m-audio-settings"
+    },
+    {
+      "item": "移动端播放 danceLevel()",
+      "value": 0.361,
+      "scene": "m-play"
+    }
+  ],
+  "summary": {
+    "total": 18,
+    "pass": 18,
+    "pending": 0,
+    "fail": 0,
+    "warn": 0
+  },
+  "failures": [],
+  "pending": [],
+  "warnings": [],
+  "scenes": [
+    {
+      "id": "caps",
+      "title": "能力探测（v6 音频调试 API / 状态 / 内置曲目 / 存档骨架）",
+      "group": "caps",
+      "query": "?screen=title&unlock=1",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=title&unlock=1",
+      "status": "pass",
+      "durationMs": 7060,
+      "attempts": 1,
+      "envHint": false,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v6qa_caps.png",
+      "screenshotVariance": 1582.06,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 1582.06,
+          "extra": {
+            "file": "reports/shots/v6qa_caps.png",
+            "bytes": 1004708,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = title",
+          "status": "pass",
+          "expected": "title",
+          "actual": "title"
+        },
+        {
+          "id": "version",
+          "desc": "VERSION = '6.0.0'",
+          "status": "pass",
+          "expected": "6.0.0",
+          "actual": "6.0.0"
+        },
+        {
+          "id": "audio-object",
+          "desc": "state().audio 存在（musicState 快照）",
+          "status": "pass",
+          "expected": "object",
+          "actual": "object"
+        },
+        {
+          "id": "audio-ready",
+          "desc": "state().audio.ready = true",
+          "status": "pass",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "id": "audio-trackcount",
+          "desc": "内置曲目 >= 2（trackCount>=2 且 builtinCount=2）",
+          "status": "pass",
+          "expected": "trackCount>=2 / builtinCount=2",
+          "actual": "trackCount=2 builtinCount=2"
+        },
+        {
+          "id": "audio-builtin-tracks",
+          "desc": "两首内置曲目 id/名称都在列表里（罐装毕加索 / 星落落oi）",
+          "status": "pass",
+          "expected": "builtin:bgm_canned_picasso + builtin:bgm_xingluoluo",
+          "actual": "Let Me Go（共创版） / Let me go"
+        },
+        {
+          "id": "audio-api",
+          "desc": "v6 音频调试 API 齐备（musicState/musicPlay/musicToggle/musicNext/setMusicVolume/setSfxVolume/musicUnlock/danceLevel/musicUploadTest/musicDbCount/audioSliderApply/settingsTabs…）",
+          "status": "pass",
+          "expected": "全部 function",
+          "actual": "全部齐备"
+        },
+        {
+          "id": "audio-idle",
+          "desc": "未解锁前不自动播放（playing=false）且无错误",
+          "status": "pass",
+          "expected": "playing=false / error=\"\"",
+          "actual": "playing=false error="
+        },
+        {
+          "id": "audio-default-track",
+          "desc": "默认曲目是内置曲目（currentId 以 builtin: 开头）",
+          "status": "pass",
+          "expected": "builtin:*",
+          "actual": "builtin:bgm_canned_picasso"
+        },
+        {
+          "id": "audio-file-input",
+          "desc": "上传入口就绪（隐藏 file input 已创建，musicPickFiles 可用）",
+          "status": "pass",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "id": "audio-fresh-uploads",
+          "desc": "干净 profile 下 uploadedCount = 0（每场景临时 profile）",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0
+        },
+        {
+          "id": "audio-save",
+          "desc": "存档 key fatfish_universe_save_v6 存在且含音乐字段",
+          "status": "pass",
+          "expected": "fatfish_universe_save_v6 含 musicVol/sfxVol/musicOn/musicTrack",
+          "actual": "字段 musicVol,sfxVol,musicOn,musicTrack"
+        },
+        {
+          "id": "audio-save-defaults",
+          "desc": "首次启动默认音量落盘 musicVol≈0.55 / sfxVol≈0.85（info）",
+          "status": "info",
+          "expected": "0.55 / 0.85",
+          "actual": "musicVol=0.55 sfxVol=0.85 musicOn=true musicTrack=builtin:bgm_canned_picasso",
+          "note": "默认值口径（SPEC-v6 §3）"
+        }
+      ],
+      "checkCounts": {
+        "pass": 16,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 1
+      },
+      "failures": [],
+      "evalResult": {
+        "version": "6.0.0",
+        "screen": "title",
+        "settingsTab": "audio",
+        "audio": {
+          "ready": true,
+          "playing": false,
+          "unlocked": false,
+          "currentId": "builtin:bgm_canned_picasso",
+          "currentName": "Let Me Go（共创版）",
+          "currentArtist": "罐装毕加索",
+          "volume": 0.55,
+          "sfxVolume": 0.85,
+          "level": 0,
+          "bass": 0,
+          "pulse": 0,
+          "dance": 0,
+          "trackCount": 2,
+          "builtinCount": 2,
+          "uploadedCount": 0,
+          "uploadsLoaded": true,
+          "dbReady": true,
+          "fileInput": true,
+          "error": "",
+          "tracks": [
+            {
+              "id": "builtin:bgm_canned_picasso",
+              "name": "Let Me Go（共创版）",
+              "artist": "罐装毕加索",
+              "kind": "builtin"
+            },
+            {
+              "id": "builtin:bgm_xingluoluo",
+              "name": "Let me go",
+              "artist": "星落落oi",
+              "kind": "builtin"
+            }
+          ]
+        },
+        "api": {
+          "musicState": "function",
+          "musicToggle": "function",
+          "musicPlay": "function",
+          "musicNext": "function",
+          "setMusicVolume": "function",
+          "setSfxVolume": "function",
+          "musicUploadTest": "function",
+          "removeUploadedMusic": "function",
+          "musicUnlock": "function",
+          "setSettingsTab": "function",
+          "danceLevel": "function",
+          "musicDbCount": "function",
+          "audioSliderApply": "function",
+          "settingsTabs": "function"
+        },
+        "saveKeys": [
+          "fatfish_universe_save_v6"
+        ],
+        "saveErr": "",
+        "save": {
+          "musicVol": 0.55,
+          "sfxVol": 0.85,
+          "musicOn": true,
+          "musicTrack": "builtin:bgm_canned_picasso"
+        }
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v6qa-caps\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v6-logs/caps.json"
+    },
+    {
+      "id": "settings-audio",
+      "title": "设置 · 音频页（双页签 / 正在播放卡 / 无极滑杆 / 播放列表）",
+      "group": "settings",
+      "query": "?screen=settings&tab=audio",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=settings&tab=audio",
+      "status": "pass",
+      "durationMs": 5309,
+      "attempts": 1,
+      "envHint": false,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v6qa_settings-audio.png",
+      "screenshotVariance": 950.6,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 950.6,
+          "extra": {
+            "file": "reports/shots/v6qa_settings-audio.png",
+            "bytes": 649796,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = settings",
+          "status": "pass",
+          "expected": "settings",
+          "actual": "settings"
+        },
+        {
+          "id": "tab-audio",
+          "desc": "?tab=audio 生效（settingsTab='audio'）",
+          "status": "pass",
+          "expected": "audio",
+          "actual": "audio"
+        },
+        {
+          "id": "sliders",
+          "desc": "settingsTabs().sliders >= 2（音乐 + 音效两条滑杆已绘制）",
+          "status": "pass",
+          "expected": ">=2",
+          "actual": 2
+        },
+        {
+          "id": "audio-ready",
+          "desc": "state().audio.ready = true",
+          "status": "pass",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "id": "trackcount",
+          "desc": "列表含 2 首内置曲目",
+          "status": "pass",
+          "expected": ">=2 / 2",
+          "actual": "trackCount=2"
+        },
+        {
+          "id": "playlist",
+          "desc": "播放列表两项内置曲目都在（id 完整）",
+          "status": "pass",
+          "expected": "builtin:bgm_canned_picasso + builtin:bgm_xingluoluo",
+          "actual": "builtin:bgm_canned_picasso,builtin:bgm_xingluoluo"
+        }
+      ],
+      "checkCounts": {
+        "pass": 10,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "settings",
+        "settingsTab": "audio",
+        "sliders": 2,
+        "audio": {
+          "ready": true,
+          "playing": false,
+          "volume": 0.55,
+          "sfxVolume": 0.85,
+          "trackCount": 2,
+          "builtinCount": 2,
+          "uploadedCount": 0,
+          "currentId": "builtin:bgm_canned_picasso",
+          "currentName": "Let Me Go（共创版）",
+          "error": "",
+          "tracks": [
+            {
+              "id": "builtin:bgm_canned_picasso",
+              "name": "Let Me Go（共创版）",
+              "kind": "builtin"
+            },
+            {
+              "id": "builtin:bgm_xingluoluo",
+              "name": "Let me go",
+              "kind": "builtin"
+            }
+          ]
+        }
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v6qa-settings-audio\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v6-logs/settings-audio.json"
+    },
+    {
+      "id": "settings-url-volume",
+      "title": "设置 · 音频页 + URL 音量（?musicVol=0.42&sfxVol=0.9）",
+      "group": "settings",
+      "query": "?screen=settings&tab=audio&musicVol=0.42&sfxVol=0.9",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=settings&tab=audio&musicVol=0.42&sfxVol=0.9",
+      "status": "pass",
+      "durationMs": 5043,
+      "attempts": 1,
+      "envHint": false,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v6qa_settings-url-volume.png",
+      "screenshotVariance": 940.14,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 940.14,
+          "extra": {
+            "file": "reports/shots/v6qa_settings-url-volume.png",
+            "bytes": 649669,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = settings",
+          "status": "pass",
+          "expected": "settings",
+          "actual": "settings"
+        },
+        {
+          "id": "tab-audio",
+          "desc": "settingsTab='audio'",
+          "status": "pass",
+          "expected": "audio",
+          "actual": "audio"
+        },
+        {
+          "id": "volume",
+          "desc": "state().audio.volume ≈ 0.42（?musicVol）",
+          "status": "pass",
+          "expected": 0.42,
+          "actual": 0.42
+        },
+        {
+          "id": "sfx",
+          "desc": "state().audio.sfxVolume ≈ 0.9（?sfxVol）",
+          "status": "pass",
+          "expected": 0.9,
+          "actual": 0.9
+        },
+        {
+          "id": "sliders",
+          "desc": "settingsTabs().sliders >= 2",
+          "status": "pass",
+          "expected": ">=2",
+          "actual": 2
+        },
+        {
+          "id": "persisted",
+          "desc": "URL 音量已写入存档（save.musicVol≈0.42 / sfxVol≈0.9）",
+          "status": "pass",
+          "expected": "0.42 / 0.9",
+          "actual": "0.42 / 0.9"
+        }
+      ],
+      "checkCounts": {
+        "pass": 10,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "settings",
+        "tab": "audio",
+        "sliders": 2,
+        "volume": 0.42,
+        "sfxVolume": 0.9,
+        "ready": true,
+        "saved": {
+          "musicVol": 0.42,
+          "sfxVol": 0.9
+        }
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v6qa-settings-url-volume\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v6-logs/settings-url-volume.json"
+    },
+    {
+      "id": "settings-slider",
+      "title": "设置 · 无极音量（audioSliderApply 0.27 / 连续多档 / setMusicVolume / setSfxVolume / 落盘）",
+      "group": "settings",
+      "query": "?screen=settings&tab=audio",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=settings&tab=audio",
+      "status": "pass",
+      "durationMs": 7783,
+      "attempts": 1,
+      "envHint": false,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v6qa_settings-slider.png",
+      "screenshotVariance": 923.16,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 923.16,
+          "extra": {
+            "file": "reports/shots/v6qa_settings-slider.png",
+            "bytes": 649365,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "sliders",
+          "desc": "settingsTabs().sliders >= 2（音乐/音效两条无极滑杆）",
+          "status": "pass",
+          "expected": ">=2",
+          "actual": 2
+        },
+        {
+          "id": "slider-027",
+          "desc": "audioSliderApply('musicVol', 0.27) → volume≈0.27",
+          "status": "pass",
+          "expected": 0.27,
+          "actual": 0.27
+        },
+        {
+          "id": "continuous",
+          "desc": "连续多档音量逐个命中（0.13/0.27/0.31/0.5/0.666/0.9，无极非量化）",
+          "status": "pass",
+          "expected": "6 档全部命中且互不相同",
+          "actual": "uniq=6 [0.13, 0.27, 0.31, 0.5, 0.666, 0.9]"
+        },
+        {
+          "id": "api-setMusicVolume",
+          "desc": "setMusicVolume(0.31) → volume≈0.31（返回 0.31）",
+          "status": "pass",
+          "expected": "0.31",
+          "actual": "0.31 (ret 0.31)"
+        },
+        {
+          "id": "api-setSfxVolume",
+          "desc": "setSfxVolume(0.9) → sfxVolume≈0.9",
+          "status": "pass",
+          "expected": 0.9,
+          "actual": 0.9
+        },
+        {
+          "id": "tabs-switch",
+          "desc": "setSettingsTab('game') / 'audio' 双页签切换生效",
+          "status": "pass",
+          "expected": "game → audio",
+          "actual": "game → audio"
+        },
+        {
+          "id": "persisted",
+          "desc": "音量延迟落盘（save.musicVol≈0.31 / sfxVol≈0.9）",
+          "status": "pass",
+          "expected": "0.31 / 0.9",
+          "actual": "0.31 / 0.9"
+        },
+        {
+          "id": "before",
+          "desc": "初始音量已恢复（info）",
+          "status": "info",
+          "expected": "恢复值",
+          "actual": 0.55,
+          "note": "settings 页初始音量"
+        }
+      ],
+      "checkCounts": {
+        "pass": 11,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 1
+      },
+      "failures": [],
+      "evalResult": {
+        "before": 0.55,
+        "series": [
+          0.13,
+          0.27,
+          0.31,
+          0.5,
+          0.666,
+          0.9
+        ],
+        "got": [
+          0.13,
+          0.27,
+          0.31,
+          0.5,
+          0.666,
+          0.9
+        ],
+        "vol27": 0.27,
+        "vol31": 0.31,
+        "ret31": 0.31,
+        "sfx": 0.9,
+        "retSfx": 0.9,
+        "setTabGame": "game",
+        "tabsGame": {
+          "tab": "game",
+          "sliders": 2
+        },
+        "tabsAudio": {
+          "tab": "audio",
+          "sliders": 2
+        },
+        "saved": {
+          "musicVol": 0.31,
+          "sfxVol": 0.9
+        }
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v6qa-settings-slider\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v6-logs/settings-slider.json"
+    },
+    {
+      "id": "play",
+      "title": "播放 · musicUnlock + musicPlay(内置曲1) → playing/dance/analyser",
+      "group": "play",
+      "query": "?screen=title&musicVol=0.5",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=title&musicVol=0.5",
+      "status": "pass",
+      "durationMs": 5760,
+      "attempts": 1,
+      "envHint": false,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v6qa_play.png",
+      "screenshotVariance": 1583.88,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 1583.88,
+          "extra": {
+            "file": "reports/shots/v6qa_play.png",
+            "bytes": 1006046,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = title",
+          "status": "pass",
+          "expected": "title",
+          "actual": "title"
+        },
+        {
+          "id": "unlock",
+          "desc": "musicUnlock() 后 state().audio.unlocked = true",
+          "status": "pass",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "id": "playing",
+          "desc": "musicPlay() 后 playing = true",
+          "status": "pass",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "id": "current",
+          "desc": "currentId = builtin:bgm_canned_picasso（罐装毕加索）",
+          "status": "pass",
+          "expected": "builtin:bgm_canned_picasso",
+          "actual": "builtin:bgm_canned_picasso"
+        },
+        {
+          "id": "current-name",
+          "desc": "currentName 含「Let Me Go」（罐装毕加索 - Let Me Go（共创版））",
+          "status": "pass",
+          "expected": "含 Let Me Go",
+          "actual": "Let Me Go（共创版） / 罐装毕加索"
+        },
+        {
+          "id": "dance",
+          "desc": "danceLevel() > 0（角色随节拍跳动，等 1.5~2.5s analyser 出数）",
+          "status": "pass",
+          "expected": ">0",
+          "actual": "dance=0.9（200ms 出数, level=0.176 bass=0.573）"
+        },
+        {
+          "id": "no-error",
+          "desc": "state().audio.error 为空（无解码/播放报错）",
+          "status": "pass",
+          "expected": "error=\"\"",
+          "actual": "error=\"\""
+        },
+        {
+          "id": "volume",
+          "desc": "?musicVol=0.5 生效（volume≈0.5）",
+          "status": "pass",
+          "expected": 0.5,
+          "actual": 0.5
+        }
+      ],
+      "checkCounts": {
+        "pass": 12,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "title",
+        "unlockedBefore": false,
+        "unlockedAfter": true,
+        "playRet": true,
+        "playing": true,
+        "currentId": "builtin:bgm_canned_picasso",
+        "currentName": "Let Me Go（共创版）",
+        "currentArtist": "罐装毕加索",
+        "volume": 0.5,
+        "sfxVolume": 0.85,
+        "trackCount": 2,
+        "builtinCount": 2,
+        "dance": 0.9,
+        "danceAtMs": 200,
+        "level": 0.176,
+        "bass": 0.573,
+        "pulse": 0.943,
+        "error": ""
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v6qa-play\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v6-logs/play.json"
+    },
+    {
+      "id": "pause",
+      "title": "暂停 · musicToggle() 暂停 / 再 toggle 恢复",
+      "group": "play",
+      "query": "?screen=title",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=title",
+      "status": "pass",
+      "durationMs": 9247,
+      "attempts": 1,
+      "envHint": false,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v6qa_pause.png",
+      "screenshotVariance": 1581.63,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 1581.63,
+          "extra": {
+            "file": "reports/shots/v6qa_pause.png",
+            "bytes": 1004327,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "before-playing",
+          "desc": "播放中（前置条件）",
+          "status": "pass",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "id": "paused",
+          "desc": "musicToggle() 后 playing = false",
+          "status": "pass",
+          "expected": false,
+          "actual": false
+        },
+        {
+          "id": "paused-dance",
+          "desc": "暂停后 danceLevel() = 0（角色停止跳动）",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0
+        },
+        {
+          "id": "resumed",
+          "desc": "再 musicToggle() 后恢复播放（playing = true）",
+          "status": "pass",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "id": "no-error",
+          "desc": "暂停/恢复全程无音频错误",
+          "status": "pass",
+          "expected": "error=\"\"",
+          "actual": ""
+        }
+      ],
+      "checkCounts": {
+        "pass": 9,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "before": {
+          "playing": true,
+          "currentId": "builtin:bgm_canned_picasso",
+          "dance": 1
+        },
+        "toggled": false,
+        "after": {
+          "playing": false,
+          "error": "",
+          "dance": 0
+        },
+        "toggledBack": true,
+        "resumed": {
+          "playing": true,
+          "currentId": "builtin:bgm_canned_picasso",
+          "error": ""
+        }
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v6qa-pause\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v6-logs/pause.json"
+    },
+    {
+      "id": "music-off",
+      "title": "URL · ?music=off 不自动播放（musicUnlock 也不开播）",
+      "group": "play",
+      "query": "?screen=title&music=off",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=title&music=off",
+      "status": "pass",
+      "durationMs": 6716,
+      "attempts": 1,
+      "envHint": false,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v6qa_music-off.png",
+      "screenshotVariance": 1580.49,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 1580.49,
+          "extra": {
+            "file": "reports/shots/v6qa_music-off.png",
+            "bytes": 1003788,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "not-playing",
+          "desc": "?music=off 下 musicUnlock() 后 playing = false",
+          "status": "pass",
+          "expected": false,
+          "actual": false
+        },
+        {
+          "id": "music-on-flag",
+          "desc": "存档 musicOn = false",
+          "status": "pass",
+          "expected": false,
+          "actual": false
+        },
+        {
+          "id": "ready",
+          "desc": "音频模块仍就绪（ready=true，曲目已载入）",
+          "status": "pass",
+          "expected": "ready=true / trackCount>=2",
+          "actual": "ready=true trackCount=2"
+        },
+        {
+          "id": "dance",
+          "desc": "danceLevel() = 0（无音乐时不跳动）",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0
+        },
+        {
+          "id": "no-error",
+          "desc": "无音频错误（静音是主动配置，不是播放失败）",
+          "status": "pass",
+          "expected": "error=\"\"",
+          "actual": ""
+        }
+      ],
+      "checkCounts": {
+        "pass": 9,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "playing": false,
+        "ready": true,
+        "unlocked": true,
+        "trackCount": 2,
+        "dance": 0,
+        "error": "",
+        "musicOn": false,
+        "musicTrack": "builtin:bgm_canned_picasso"
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v6qa-music-off\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v6-logs/music-off.json"
+    },
+    {
+      "id": "next-track",
+      "title": "切歌 · musicNext() 换曲 / 内置曲2 currentName 含「Let me go」",
+      "group": "play",
+      "query": "?screen=title&musicVol=0.5",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=title&musicVol=0.5",
+      "status": "pass",
+      "durationMs": 9822,
+      "attempts": 1,
+      "envHint": false,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v6qa_next-track.png",
+      "screenshotVariance": 1580.61,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 1580.61,
+          "extra": {
+            "file": "reports/shots/v6qa_next-track.png",
+            "bytes": 1003596,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "next-changed",
+          "desc": "musicNext() 后 currentId 变化",
+          "status": "pass",
+          "expected": "不同 id",
+          "actual": "builtin:bgm_canned_picasso → builtin:bgm_xingluoluo"
+        },
+        {
+          "id": "next-xing",
+          "desc": "musicNext() 切到内置曲2（builtin:bgm_xingluoluo）",
+          "status": "pass",
+          "expected": "builtin:bgm_xingluoluo",
+          "actual": "builtin:bgm_xingluoluo"
+        },
+        {
+          "id": "next-name",
+          "desc": "切歌后 currentName 含「Let me go」（星落落oi - Let me go）",
+          "status": "pass",
+          "expected": "含 Let me go",
+          "actual": "Let me go / 星落落oi"
+        },
+        {
+          "id": "next-playing",
+          "desc": "切歌后仍然 playing = true",
+          "status": "pass",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "id": "picasso-name",
+          "desc": "内置曲1 名称含「Let Me Go」（罐装毕加索）",
+          "status": "pass",
+          "expected": "含 Let Me Go",
+          "actual": "Let Me Go（共创版）"
+        },
+        {
+          "id": "xing-name",
+          "desc": "musicPlay(内置曲2) 后 currentName = Let me go",
+          "status": "pass",
+          "expected": "含 Let me go",
+          "actual": "Let me go / 星落落oi"
+        },
+        {
+          "id": "no-error",
+          "desc": "切歌全程无音频错误",
+          "status": "pass",
+          "expected": "error=\"\"",
+          "actual": ""
+        }
+      ],
+      "checkCounts": {
+        "pass": 11,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "before": {
+          "id": "builtin:bgm_canned_picasso",
+          "name": "Let Me Go（共创版）",
+          "playing": true
+        },
+        "nextRet": true,
+        "next": {
+          "id": "builtin:bgm_xingluoluo",
+          "name": "Let me go",
+          "artist": "星落落oi",
+          "playing": true,
+          "error": ""
+        },
+        "picassoName": "Let Me Go（共创版）",
+        "xing": {
+          "id": "builtin:bgm_xingluoluo",
+          "name": "Let me go",
+          "artist": "星落落oi",
+          "playing": true
+        }
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v6qa-next-track\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v6-logs/next-track.json"
+    },
+    {
+      "id": "cross-keep",
+      "title": "跨界面保持 · title → launch → flight（musicVol=0.44，播放/音量/曲目不变）",
+      "group": "play",
+      "query": "?screen=title&musicVol=0.44",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=title&musicVol=0.44",
+      "status": "pass",
+      "durationMs": 10491,
+      "attempts": 1,
+      "envHint": false,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v6qa_cross-keep.png",
+      "screenshotVariance": 732.36,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 732.36,
+          "extra": {
+            "file": "reports/shots/v6qa_cross-keep.png",
+            "bytes": 954386,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "title-play",
+          "desc": "title 先播起来（前置条件：playing + volume≈0.44）",
+          "status": "pass",
+          "expected": "playing=true / 0.44",
+          "actual": "true / 0.44"
+        },
+        {
+          "id": "launch-keep",
+          "desc": "goto(launch) 后 playing / volume 不变",
+          "status": "pass",
+          "expected": "playing=true / 0.44 / screen=launch",
+          "actual": "true / 0.44 / launch"
+        },
+        {
+          "id": "flight-keep",
+          "desc": "startFlight() 后 playing / volume 不变（飞行中音乐不中断）",
+          "status": "pass",
+          "expected": "playing=true / 0.44 / screen=flight",
+          "actual": "true / 0.44 / flight"
+        },
+        {
+          "id": "track-keep",
+          "desc": "三步 currentId 一致（不切歌不重建播放器）",
+          "status": "pass",
+          "expected": "三步相同",
+          "actual": "builtin:bgm_canned_picasso → builtin:bgm_canned_picasso → builtin:bgm_canned_picasso"
+        },
+        {
+          "id": "flight-dance",
+          "desc": "飞行中 danceLevel() > 0（角色/伙伴随节拍跳动）",
+          "status": "pass",
+          "expected": ">0",
+          "actual": 0.649
+        },
+        {
+          "id": "flight-live",
+          "desc": "飞行确实开始（screen=flight）",
+          "status": "pass",
+          "expected": "flight",
+          "actual": "flight"
+        },
+        {
+          "id": "no-error",
+          "desc": "全程无音频错误",
+          "status": "pass",
+          "expected": "error=\"\"",
+          "actual": ""
+        }
+      ],
+      "checkCounts": {
+        "pass": 11,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "title": {
+          "screen": "title",
+          "playing": true,
+          "volume": 0.44,
+          "currentId": "builtin:bgm_canned_picasso",
+          "error": ""
+        },
+        "launch": {
+          "screen": "launch",
+          "playing": true,
+          "volume": 0.44,
+          "currentId": "builtin:bgm_canned_picasso",
+          "error": ""
+        },
+        "flight": {
+          "screen": "flight",
+          "playing": true,
+          "volume": 0.44,
+          "currentId": "builtin:bgm_canned_picasso",
+          "error": ""
+        },
+        "flightDance": 0.649,
+        "flightHp": 3,
+        "flightProgress": 0.07547943750000002,
+        "flightScreen": "flight",
+        "trackCount": 2
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v6qa-cross-keep\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v6-logs/cross-keep.json"
+    },
+    {
+      "id": "upload-add",
+      "title": "上传 · musicUploadTest 导入合成 WAV → 列表 +1 / IndexedDB 读回 / 自动播放",
+      "group": "upload",
+      "query": "?screen=settings&tab=audio&musicVol=0.23&sfxVol=0.4",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=settings&tab=audio&musicVol=0.23&sfxVol=0.4",
+      "status": "pass",
+      "durationMs": 6226,
+      "attempts": 1,
+      "envHint": false,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v6qa_upload-add.png",
+      "screenshotVariance": 807.4,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 807.4,
+          "extra": {
+            "file": "reports/shots/v6qa_upload-add.png",
+            "bytes": 650935,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "test-id",
+          "desc": "musicUploadTest() 返回 user: test 曲目 id",
+          "status": "pass",
+          "expected": "user:*",
+          "actual": "user:test:1795016515315"
+        },
+        {
+          "id": "trackcount",
+          "desc": "上传后 trackCount +1",
+          "status": "pass",
+          "expected": "+1",
+          "actual": "2 → 3"
+        },
+        {
+          "id": "uploaded",
+          "desc": "uploadedCount >= 1",
+          "status": "pass",
+          "expected": ">=1",
+          "actual": 1
+        },
+        {
+          "id": "playing",
+          "desc": "上传后自动播放（playing = true）",
+          "status": "pass",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "id": "current",
+          "desc": "currentId = 上传曲目 id",
+          "status": "pass",
+          "expected": "= testId",
+          "actual": "user:test:1795016515315"
+        },
+        {
+          "id": "playlist",
+          "desc": "播放列表里有「QA 测试曲」（kind=user / 作者=本地上传）",
+          "status": "pass",
+          "expected": "name=QA 测试曲 / kind=user",
+          "actual": "QA 测试曲 / 本地上传 (user:test:1795016515315)"
+        },
+        {
+          "id": "db-count",
+          "desc": "musicDbCount() 重新读 IndexedDB >= 1",
+          "status": "pass",
+          "expected": ">=1",
+          "actual": 1
+        },
+        {
+          "id": "dance",
+          "desc": "上传曲目播放时 danceLevel() > 0（analyser 工作）",
+          "status": "pass",
+          "expected": ">0",
+          "actual": 0.009
+        },
+        {
+          "id": "settings-state",
+          "desc": "停在音频设置页（截图含上传曲目行）",
+          "status": "pass",
+          "expected": "settings/audio/sliders>=2",
+          "actual": "settings/audio/sliders=2"
+        },
+        {
+          "id": "volume",
+          "desc": "?musicVol=0.23 / ?sfxVol=0.4 保持",
+          "status": "pass",
+          "expected": "0.23 / 0.4",
+          "actual": "0.23 / 0.4"
+        },
+        {
+          "id": "no-error",
+          "desc": "无音频错误",
+          "status": "pass",
+          "expected": "error=\"\"",
+          "actual": ""
+        }
+      ],
+      "checkCounts": {
+        "pass": 15,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "before": {
+          "trackCount": 2,
+          "uploadedCount": 0
+        },
+        "testId": "user:test:1795016515315",
+        "after": {
+          "trackCount": 3,
+          "uploadedCount": 1,
+          "currentId": "user:test:1795016515315",
+          "playing": true,
+          "volume": 0.23,
+          "sfxVolume": 0.4,
+          "uploadsLoaded": true,
+          "dbReady": true,
+          "error": ""
+        },
+        "dbCount": 1,
+        "dance": 0.009,
+        "tracks": [
+          {
+            "id": "builtin:bgm_canned_picasso",
+            "name": "Let Me Go（共创版）",
+            "artist": "罐装毕加索",
+            "kind": "builtin"
+          },
+          {
+            "id": "builtin:bgm_xingluoluo",
+            "name": "Let me go",
+            "artist": "星落落oi",
+            "kind": "builtin"
+          },
+          {
+            "id": "user:test:1795016515315",
+            "name": "QA 测试曲",
+            "artist": "本地上传",
+            "kind": "user"
+          }
+        ],
+        "screen": "settings",
+        "tab": "audio",
+        "sliders": 2
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v6qa-upload-add\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v6-logs/upload-add.json"
+    },
+    {
+      "id": "upload-remove",
+      "title": "删除 · removeUploadedMusic(id) → 列表/IndexedDB 恢复，切回内置曲目继续播",
+      "group": "upload",
+      "query": "?screen=settings&tab=audio",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=settings&tab=audio",
+      "status": "pass",
+      "durationMs": 6772,
+      "attempts": 1,
+      "envHint": false,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v6qa_upload-remove.png",
+      "screenshotVariance": 994.61,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 994.61,
+          "extra": {
+            "file": "reports/shots/v6qa_upload-remove.png",
+            "bytes": 654533,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "mid-added",
+          "desc": "前置：上传后 uploadedCount = before+1",
+          "status": "pass",
+          "expected": "+1",
+          "actual": "0 → 1"
+        },
+        {
+          "id": "removed",
+          "desc": "removeUploadedMusic(id) 返回 true",
+          "status": "pass",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "id": "restored",
+          "desc": "删除后 uploadedCount 恢复原值",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0
+        },
+        {
+          "id": "trackcount",
+          "desc": "删除后 trackCount 恢复原值（回到 2 首内置）",
+          "status": "pass",
+          "expected": 2,
+          "actual": 2
+        },
+        {
+          "id": "db-removed",
+          "desc": "musicDbCount() 重新读 IndexedDB 也恢复（删除落库）",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0
+        },
+        {
+          "id": "fallback",
+          "desc": "删除当前曲目后回落到内置曲目并继续播放",
+          "status": "pass",
+          "expected": "builtin:* / playing=true",
+          "actual": "builtin:bgm_canned_picasso / playing=true"
+        },
+        {
+          "id": "no-error",
+          "desc": "删除全程无音频错误",
+          "status": "pass",
+          "expected": "error=\"\"",
+          "actual": ""
+        }
+      ],
+      "checkCounts": {
+        "pass": 11,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "before": {
+          "uploadedCount": 0,
+          "trackCount": 2
+        },
+        "id": "user:test:1795016521514",
+        "mid": {
+          "uploadedCount": 1,
+          "trackCount": 3,
+          "currentId": "user:test:1795016521514",
+          "playing": true
+        },
+        "removed": true,
+        "after": {
+          "uploadedCount": 0,
+          "trackCount": 2,
+          "currentId": "builtin:bgm_canned_picasso",
+          "playing": true,
+          "error": ""
+        },
+        "dbAfter": 0,
+        "tracks": [
+          {
+            "id": "builtin:bgm_canned_picasso",
+            "name": "Let Me Go（共创版）",
+            "artist": "罐装毕加索",
+            "kind": "builtin"
+          },
+          {
+            "id": "builtin:bgm_xingluoluo",
+            "name": "Let me go",
+            "artist": "星落落oi",
+            "kind": "builtin"
+          }
+        ]
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v6qa-upload-remove\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v6-logs/upload-remove.json"
+    },
+    {
+      "id": "persist-write",
+      "title": "跨启动持久化① · 写：上传曲目 + 音量 0.37/0.62 存进 profile",
+      "group": "persist",
+      "query": "?screen=settings&tab=audio",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=settings&tab=audio",
+      "status": "pass",
+      "durationMs": 7025,
+      "attempts": 1,
+      "envHint": false,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": null,
+      "screenshotVariance": null,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "uploaded",
+          "desc": "写入轮 uploadedCount >= 1",
+          "status": "pass",
+          "expected": ">=1",
+          "actual": 1
+        },
+        {
+          "id": "volume",
+          "desc": "写入轮 volume≈0.37 / sfx≈0.62",
+          "status": "pass",
+          "expected": "0.37 / 0.62",
+          "actual": "0.37 / 0.62"
+        },
+        {
+          "id": "saved",
+          "desc": "存档已落盘（savedVol≈0.37 / savedTrack=上传 id）",
+          "status": "pass",
+          "expected": "0.37 / user:*",
+          "actual": "0.37 / user:test:1795016528495"
+        },
+        {
+          "id": "db",
+          "desc": "写入轮 musicDbCount() >= 1",
+          "status": "pass",
+          "expected": ">=1",
+          "actual": 1
+        }
+      ],
+      "checkCounts": {
+        "pass": 7,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "id": "user:test:1795016528495",
+        "uploadedCount": 1,
+        "trackCount": 3,
+        "volume": 0.37,
+        "sfxVolume": 0.62,
+        "savedVol": 0.37,
+        "savedSfx": 0.62,
+        "savedOn": true,
+        "savedTrack": "user:test:1795016528495",
+        "db": 1,
+        "tracks": [
+          {
+            "id": "builtin:bgm_canned_picasso",
+            "name": "Let Me Go（共创版）",
+            "artist": "罐装毕加索",
+            "kind": "builtin"
+          },
+          {
+            "id": "builtin:bgm_xingluoluo",
+            "name": "Let me go",
+            "artist": "星落落oi",
+            "kind": "builtin"
+          },
+          {
+            "id": "user:test:1795016528495",
+            "name": "QA 跨启动曲",
+            "artist": "本地上传",
+            "kind": "user"
+          }
+        ]
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v6qa-persist-write\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v6-logs/persist-write.json"
+    },
+    {
+      "id": "persist-read",
+      "title": "跨启动持久化② · 读：同一 profile 重开 → 上传曲目/音量还在",
+      "group": "persist",
+      "query": "?screen=settings&tab=audio",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=settings&tab=audio",
+      "status": "pass",
+      "durationMs": 5554,
+      "attempts": 1,
+      "envHint": false,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": null,
+      "screenshotVariance": null,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "uploaded",
+          "desc": "重开后 uploadedCount >= 1（IndexedDB 跨启动恢复）",
+          "status": "pass",
+          "expected": ">=1",
+          "actual": 1
+        },
+        {
+          "id": "db",
+          "desc": "重开后 musicDbCount() >= 1",
+          "status": "pass",
+          "expected": ">=1",
+          "actual": 1
+        },
+        {
+          "id": "trackcount",
+          "desc": "重开后 trackCount >= 3（2 内置 + 上传）",
+          "status": "pass",
+          "expected": ">=3",
+          "actual": 3
+        },
+        {
+          "id": "volume",
+          "desc": "重开后音量保持 volume≈0.37（存档持久化）",
+          "status": "pass",
+          "expected": 0.37,
+          "actual": 0.37
+        },
+        {
+          "id": "sfx",
+          "desc": "重开后 sfxVolume≈0.62",
+          "status": "pass",
+          "expected": 0.62,
+          "actual": 0.62
+        },
+        {
+          "id": "saved",
+          "desc": "localStorage 存档仍是中写轮写入的值（musicTrack=上传 id）",
+          "status": "pass",
+          "expected": "0.37 / user:*",
+          "actual": "0.37 / user:test:1795016528495"
+        },
+        {
+          "id": "uploaded-track",
+          "desc": "播放列表含「QA 跨启动曲」",
+          "status": "pass",
+          "expected": "name=QA 跨启动曲",
+          "actual": "user:test:1795016528495"
+        },
+        {
+          "id": "no-error",
+          "desc": "恢复后无音频错误",
+          "status": "pass",
+          "expected": "error=\"\"",
+          "actual": ""
+        }
+      ],
+      "checkCounts": {
+        "pass": 11,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "uploadedCount": 1,
+        "trackCount": 3,
+        "volume": 0.37,
+        "sfxVolume": 0.62,
+        "uploadsLoaded": true,
+        "dbReady": true,
+        "db": 1,
+        "currentId": "user:test:1795016528495",
+        "currentName": "QA 跨启动曲",
+        "error": "",
+        "savedVol": 0.37,
+        "savedSfx": 0.62,
+        "savedTrack": "user:test:1795016528495",
+        "tracks": [
+          {
+            "id": "builtin:bgm_canned_picasso",
+            "name": "Let Me Go（共创版）",
+            "artist": "罐装毕加索",
+            "kind": "builtin"
+          },
+          {
+            "id": "builtin:bgm_xingluoluo",
+            "name": "Let me go",
+            "artist": "星落落oi",
+            "kind": "builtin"
+          },
+          {
+            "id": "user:test:1795016528495",
+            "name": "QA 跨启动曲",
+            "artist": "本地上传",
+            "kind": "user"
+          }
+        ]
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v6qa-persist-read\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v6-logs/persist-read.json"
+    },
+    {
+      "id": "m-audio-settings",
+      "title": "移动端 390x844 · 设置音频页",
+      "group": "mobile",
+      "query": "?screen=settings&tab=audio&musicVol=0.66",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=settings&tab=audio&musicVol=0.66",
+      "status": "pass",
+      "durationMs": 5507,
+      "attempts": 1,
+      "envHint": false,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v6qa_m-audio-settings.png",
+      "screenshotVariance": 1223,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 60）",
+          "status": "pass",
+          "expected": "> 60",
+          "actual": 1223,
+          "extra": {
+            "file": "reports/shots/v6qa_m-audio-settings.png",
+            "bytes": 189794,
+            "width": 390,
+            "height": 844
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = settings",
+          "status": "pass",
+          "expected": "settings",
+          "actual": "settings"
+        },
+        {
+          "id": "tab",
+          "desc": "settingsTab='audio'",
+          "status": "pass",
+          "expected": "audio",
+          "actual": "audio"
+        },
+        {
+          "id": "sliders",
+          "desc": "移动端滑杆 >= 2（无极滑杆已绘制）",
+          "status": "pass",
+          "expected": ">=2",
+          "actual": 2
+        },
+        {
+          "id": "volume",
+          "desc": "?musicVol=0.66 生效",
+          "status": "pass",
+          "expected": 0.66,
+          "actual": 0.66
+        },
+        {
+          "id": "viewport",
+          "desc": "视口 = 390x844",
+          "status": "pass",
+          "expected": "390x844",
+          "actual": "390x844"
+        },
+        {
+          "id": "ready",
+          "desc": "音频模块就绪",
+          "status": "pass",
+          "expected": "ready=true",
+          "actual": "ready=true trackCount=2"
+        }
+      ],
+      "checkCounts": {
+        "pass": 10,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "settings",
+        "tab": "audio",
+        "sliders": 2,
+        "volume": 0.66,
+        "ready": true,
+        "trackCount": 2,
+        "vw": 390,
+        "vh": 844
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v6qa-m-audio-settings\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v6-logs/m-audio-settings.json"
+    },
+    {
+      "id": "m-play",
+      "title": "移动端 390x844 · 播放状态（dance / 曲目）",
+      "group": "mobile",
+      "query": "?screen=title&musicVol=0.66",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=title&musicVol=0.66",
+      "status": "pass",
+      "durationMs": 5088,
+      "attempts": 1,
+      "envHint": false,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v6qa_m-play.png",
+      "screenshotVariance": 1668.42,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 60）",
+          "status": "pass",
+          "expected": "> 60",
+          "actual": 1668.42,
+          "extra": {
+            "file": "reports/shots/v6qa_m-play.png",
+            "bytes": 347449,
+            "width": 390,
+            "height": 844
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = title",
+          "status": "pass",
+          "expected": "title",
+          "actual": "title"
+        },
+        {
+          "id": "playing",
+          "desc": "移动端播放中",
+          "status": "pass",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "id": "dance",
+          "desc": "danceLevel() > 0",
+          "status": "pass",
+          "expected": ">0",
+          "actual": "dance=0.361（300ms）"
+        },
+        {
+          "id": "volume",
+          "desc": "?musicVol=0.66 生效",
+          "status": "pass",
+          "expected": 0.66,
+          "actual": 0.66
+        },
+        {
+          "id": "viewport",
+          "desc": "视口 = 390x844",
+          "status": "pass",
+          "expected": "390x844",
+          "actual": "390x844"
+        },
+        {
+          "id": "no-error",
+          "desc": "无音频错误",
+          "status": "pass",
+          "expected": "error=\"\"",
+          "actual": ""
+        }
+      ],
+      "checkCounts": {
+        "pass": 10,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "title",
+        "playing": true,
+        "currentId": "builtin:bgm_canned_picasso",
+        "currentName": "Let Me Go（共创版）",
+        "volume": 0.66,
+        "dance": 0.361,
+        "danceAtMs": 300,
+        "error": "",
+        "vw": 390,
+        "vh": 844
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v6qa-m-play\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v6-logs/m-play.json"
+    },
+    {
+      "id": "help",
+      "title": "帮助页 · 音频说明（截图；文案静态扫描在 static 场景）",
+      "group": "desktop",
+      "query": "?screen=help",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=help",
+      "status": "pass",
+      "durationMs": 5535,
+      "attempts": 1,
+      "envHint": false,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v6qa_help.png",
+      "screenshotVariance": 1376.36,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 1376.36,
+          "extra": {
+            "file": "reports/shots/v6qa_help.png",
+            "bytes": 844856,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = help",
+          "status": "pass",
+          "expected": "help",
+          "actual": "help"
+        },
+        {
+          "id": "version",
+          "desc": "版本号 6.x",
+          "status": "pass",
+          "expected": "6.x",
+          "actual": "6.0.0"
+        },
+        {
+          "id": "audio-ready",
+          "desc": "帮助页下音频模块仍就绪",
+          "status": "pass",
+          "expected": "ready=true",
+          "actual": "ready=true trackCount=2"
+        }
+      ],
+      "checkCounts": {
+        "pass": 7,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "help",
+        "version": "6.0.0",
+        "audioReady": true,
+        "trackCount": 2
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v6qa-help\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v6-logs/help.json"
+    },
+    {
+      "id": "static",
+      "title": "构建产物静态扫描（内置音乐 / 音频模块 / IndexedDB / 帮助文案 / URL 参数）",
+      "group": "static",
+      "status": "pass",
+      "durationMs": 0,
+      "screenshot": null,
+      "checks": [
+        {
+          "id": "datauri-count",
+          "desc": "index.html 内 data:audio/mpeg;base64 >= 2（两首内置曲目内联）",
+          "status": "pass",
+          "expected": ">=2",
+          "actual": 3
+        },
+        {
+          "id": "snd-keys",
+          "desc": "SND 表含两首内置曲目 key（bgm_canned_picasso / bgm_xingluoluo）",
+          "status": "pass",
+          "expected": "2 个 key",
+          "actual": "2 个齐备"
+        },
+        {
+          "id": "version",
+          "desc": "构建产物 VERSION = '6.0.0'",
+          "status": "pass",
+          "expected": "6.0.0",
+          "actual": "6.0.0"
+        },
+        {
+          "id": "save-key",
+          "desc": "存档 key fatfish_universe_save_v6",
+          "status": "pass",
+          "expected": "'fatfish_universe_save_v6'",
+          "actual": "存在"
+        },
+        {
+          "id": "audio-fns",
+          "desc": "src/audio.js 关键函数全部编译进构建产物（musicInit/musicUnlock/musicPlay/…/audioUpdate）",
+          "status": "pass",
+          "expected": "17 个 function",
+          "actual": "全部存在"
+        },
+        {
+          "id": "ui-hooks",
+          "desc": "ui/engine 音频挂点（滑杆绘制 / 设置页 / 调试 API）",
+          "status": "pass",
+          "expected": "12 个",
+          "actual": "全部存在"
+        },
+        {
+          "id": "db-contract",
+          "desc": "IndexedDB 契约（fatfish_audio_v1 / tracks / 48MB 上限）",
+          "status": "pass",
+          "expected": "库名 + store + 上限",
+          "actual": "全部存在"
+        },
+        {
+          "id": "gain-map",
+          "desc": "音量映射 Gain = v^1.4（SPEC-v6 §4）",
+          "status": "pass",
+          "expected": "v^1.4",
+          "actual": "存在"
+        },
+        {
+          "id": "analyser",
+          "desc": "WebAudio 分析器 fftSize = 256（律动分析）",
+          "status": "pass",
+          "expected": "createAnalyser + fftSize=256",
+          "actual": "存在"
+        },
+        {
+          "id": "beat-fallback",
+          "desc": "分析器不可用时的合成节拍兜底（MUSIC.silentT > 0.5 分支）",
+          "status": "pass",
+          "expected": "兜底分支存在",
+          "actual": "存在"
+        },
+        {
+          "id": "help-text",
+          "desc": "帮助页/设置页音频说明文案（无极 / 上传 / IndexedDB / 飞行保持）",
+          "status": "pass",
+          "expected": "无极 / 上传自己喜欢的音乐 / IndexedDB / 发射与飞行全程不中断",
+          "actual": "4 段齐备"
+        },
+        {
+          "id": "url-params",
+          "desc": "v6 URL 参数（?music=off / ?musicVol / ?sfxVol / ?tab）",
+          "status": "pass",
+          "expected": "4 个参数",
+          "actual": "全部存在"
+        },
+        {
+          "id": "size",
+          "desc": "index.html 体积符合 SPEC-v6（约 8.7MB，含两首内置音乐）",
+          "status": "pass",
+          "expected": "8.0~9.8 MB",
+          "actual": "8.67 MB"
+        },
+        {
+          "id": "index-stat",
+          "desc": "构建产物信息（info）",
+          "status": "info",
+          "expected": "—",
+          "actual": "9089288 B / mtime 2026-11-18T15:35:23.635Z / sha256 b20bf9c75e248065…"
+        }
+      ],
+      "evalResult": null,
+      "checkCounts": {
+        "pass": 13,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 1
+      },
+      "failures": []
+    },
+    {
+      "id": "cross",
+      "title": "跨场景交叉断言（v5 基线不退化 / 全场景 0 console error / 构建稳定）",
+      "group": "cross",
+      "status": "pass",
+      "durationMs": 0,
+      "screenshot": null,
+      "checks": [
+        {
+          "id": "v5-baseline",
+          "desc": "v5 基线 50 场景（label=v6.1-baseline）",
+          "status": "pass",
+          "expected": 50,
+          "actual": 50
+        },
+        {
+          "id": "v5-no-regression",
+          "desc": "v5 基线 0 fail（v4/v5 功能不退化）",
+          "status": "pass",
+          "expected": "fail=0",
+          "actual": "pass=50 pending=0 warn=0 fail=0"
+        },
+        {
+          "id": "v5-baseline-build",
+          "desc": "v5 基线跑的是当前最终构建（bytes + mtime 一致）",
+          "status": "pass",
+          "expected": "9089288 B / 2026-11-18T15:35:23.635Z",
+          "actual": "9089288 B / 2026-11-18T15:35:23.635Z"
+        },
+        {
+          "id": "console-all",
+          "desc": "全部音频场景 console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0 个场景有错",
+          "actual": "16 个场景全 0",
+          "raw": []
+        },
+        {
+          "id": "build-stable",
+          "desc": "跑测期间 index.html 未被改动（结果对应同一构建）",
+          "status": "pass",
+          "expected": "9089288 B / 2026-11-18T15:35:23.635Z",
+          "actual": "9089288 B / 2026-11-18T15:35:23.635Z"
+        },
+        {
+          "id": "env-limits",
+          "desc": "环境限制场景（pending，不影响验收判定）",
+          "status": "info",
+          "expected": "—",
+          "actual": "无",
+          "note": "--user-data-dir 复用 profile 偶发 CDP/WebSocket 失败（Lead 实测）；同页 IndexedDB 读回已由 upload-add 覆盖"
+        },
+        {
+          "id": "scene-count",
+          "desc": "v6 音频场景数（info）",
+          "status": "info",
+          "expected": "—",
+          "actual": "16 个真实场景 + static + cross"
+        }
+      ],
+      "evalResult": null,
+      "v5Baseline": {
+        "label": "v6.1-baseline",
+        "generatedAt": "2026-11-18T15:40:39.272Z",
+        "summary": {
+          "total": 50,
+          "pass": 50,
+          "pending": 0,
+          "fail": 0,
+          "warn": 0
+        },
+        "exitCode": 0,
+        "indexHtml": {
+          "path": "C:\\Users\\admin\\Desktop\\FatFish-Playable\\index.html",
+          "bytes": 9089288,
+          "mtime": "2026-11-18T15:35:23.635Z"
+        }
+      },
+      "checkCounts": {
+        "pass": 5,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 2
+      },
+      "failures": []
+    }
+  ]
+}

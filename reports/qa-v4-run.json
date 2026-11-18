@@ -1,0 +1,4655 @@
+{
+  "ok": true,
+  "tool": "tools/qa_v4_run.mjs",
+  "toolVersion": 4,
+  "label": "final2",
+  "generatedAt": "2026-11-18T13:33:55.145Z",
+  "startedAt": "2026-11-18T13:31:15.068Z",
+  "durationMs": 160077,
+  "exitCode": 0,
+  "indexHtml": {
+    "path": "C:\\Users\\admin\\Desktop\\FatFish-Playable\\index.html",
+    "bytes": 3521397,
+    "mtime": "2026-11-18T13:30:42.902Z"
+  },
+  "host": {
+    "platform": "win32",
+    "node": "v24.21.0",
+    "arch": "x64",
+    "chromeHint": "C:\\Users\\admin\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe",
+    "exists": true
+  },
+  "caps": {
+    "version": "4.0.0",
+    "liveAstro": true,
+    "nodeAstroApi": true,
+    "starTextures": true,
+    "charArt": true,
+    "shopPageApi": true,
+    "astronomyNodeError": null,
+    "probe": {
+      "version": "4.0.0",
+      "screen": "title",
+      "charCount": 9,
+      "charImages": 8,
+      "starTextures": 13,
+      "shopPage": 0,
+      "shopPages": 3,
+      "owned": [
+        "deepseek",
+        "chatgpt",
+        "claude",
+        "gemini",
+        "grok",
+        "kimi",
+        "glm",
+        "qwen",
+        "minimax"
+      ],
+      "ownedLen": 9,
+      "primary": "deepseek",
+      "liveFlag": true,
+      "liveTotalAU": 93.76059524213221,
+      "liveTotalKm": 14026385403.787529,
+      "livePlanets": 9,
+      "liveLegs": 9,
+      "liveIso": "2026-11-18 12:00:00 UTC",
+      "clockMs": 1795003200000,
+      "bgMeteors": 0,
+      "hasShopPage": "function",
+      "api": {
+        "state": "function",
+        "liveInfo": "function",
+        "setTime": "function",
+        "upgrade": "function",
+        "giveStardust": "function",
+        "setCompanions": "function",
+        "spawnUFO": "function",
+        "killUFO": "function",
+        "saveFlight": "function",
+        "resumeFlight": "function",
+        "giveShield": "function",
+        "setShopPage": "function",
+        "clearSave": "function",
+        "unlockAll": "function",
+        "setPrimary": "function",
+        "setProgress": "function",
+        "jumpTo": "function",
+        "goto": "function"
+      }
+    }
+  },
+  "summary": {
+    "total": 34,
+    "pass": 34,
+    "pending": 0,
+    "fail": 0,
+    "warn": 0
+  },
+  "failures": [],
+  "pending": [],
+  "warnings": [],
+  "scenes": [
+    {
+      "id": "caps",
+      "title": "能力探测（调试 API / 贴图 / 立绘 / 实时天文）",
+      "group": "caps",
+      "query": "?screen=title&unlock=1&live=1",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=title&unlock=1&live=1",
+      "status": "pass",
+      "durationMs": 6787,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_caps.png",
+      "screenshotVariance": 1448.42,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 1448.42,
+          "extra": {
+            "file": "reports/shots/v4qa_caps.png",
+            "bytes": 1005551,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = title",
+          "status": "pass",
+          "expected": "title",
+          "actual": "title"
+        },
+        {
+          "id": "version",
+          "desc": "f.version 以 4. 开头",
+          "status": "pass",
+          "expected": "4.x",
+          "actual": "4.0.0"
+        },
+        {
+          "id": "api-core",
+          "desc": "调试 API 齐备（state/liveInfo/setTime/upgrade/giveStardust/setCompanions/spawnUFO/killUFO/saveFlight/resumeFlight/giveShield/clearSave/unlockAll/setPrimary/setProgress）",
+          "status": "pass",
+          "expected": "全部 function",
+          "actual": "全部齐备"
+        },
+        {
+          "id": "api-shop-page",
+          "desc": "setShopPage(n) 存在（v4 商城分页 QA 入口）",
+          "status": "pass",
+          "expected": "function",
+          "actual": "function"
+        },
+        {
+          "id": "char-count",
+          "desc": "CHARACTERS = 9 位角色（state().charCount）",
+          "status": "pass",
+          "expected": 9,
+          "actual": 9
+        },
+        {
+          "id": "char-images",
+          "desc": "8 位新角色立绘已加载（state().charImages >= 8，deepseek 用 hero）",
+          "status": "pass",
+          "expected": ">=8",
+          "actual": 8
+        },
+        {
+          "id": "owned-9",
+          "desc": "unlockAll 后 state().owned 含 9 个角色 id",
+          "status": "pass",
+          "expected": "9 个 id",
+          "actual": "9 个"
+        },
+        {
+          "id": "star-textures",
+          "desc": "star_* 恒星贴图 >= 10（state().starTextures）",
+          "status": "pass",
+          "expected": ">=10",
+          "actual": 13
+        },
+        {
+          "id": "live-flag",
+          "desc": "state().live.live === true（实时天文已接入）",
+          "status": "pass",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "id": "live-legs",
+          "desc": "liveInfo().legs 共 9 段（实时总航程可算）",
+          "status": "pass",
+          "expected": 9,
+          "actual": 9
+        },
+        {
+          "id": "live-totalau",
+          "desc": "state().live.totalAU > 0",
+          "status": "pass",
+          "expected": ">0",
+          "actual": 93.76059524213221
+        },
+        {
+          "id": "live-planets",
+          "desc": "state().live.planets 共 9 颗行星",
+          "status": "pass",
+          "expected": 9,
+          "actual": 9
+        },
+        {
+          "id": "live-clock",
+          "desc": "?live=1 固定观测时刻 = 2026-11-18T12:00:00Z",
+          "status": "pass",
+          "expected": 1795003200000,
+          "actual": 1795003200000,
+          "note": "clockMs=1795003200000"
+        },
+        {
+          "id": "live-iso",
+          "desc": "观测时刻可显示（state().live.iso 非空）",
+          "status": "pass",
+          "expected": "含日期的观测时刻",
+          "actual": "2026-11-18 12:00:00 UTC"
+        },
+        {
+          "id": "api-setShield",
+          "desc": "SPEC §9 的 setShield(n)（仅记录，giveShield 已可用）",
+          "status": "info",
+          "actual": {
+            "giveShield": "function"
+          },
+          "note": "SPEC 写的是 setShield，engine 实际提供 giveShield"
+        }
+      ],
+      "checkCounts": {
+        "pass": 18,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 1
+      },
+      "failures": [],
+      "evalResult": {
+        "version": "4.0.0",
+        "screen": "title",
+        "charCount": 9,
+        "charImages": 8,
+        "starTextures": 13,
+        "shopPage": 0,
+        "shopPages": 3,
+        "owned": [
+          "deepseek",
+          "chatgpt",
+          "claude",
+          "gemini",
+          "grok",
+          "kimi",
+          "glm",
+          "qwen",
+          "minimax"
+        ],
+        "ownedLen": 9,
+        "primary": "deepseek",
+        "liveFlag": true,
+        "liveTotalAU": 93.76059524213221,
+        "liveTotalKm": 14026385403.787529,
+        "livePlanets": 9,
+        "liveLegs": 9,
+        "liveIso": "2026-11-18 12:00:00 UTC",
+        "clockMs": 1795003200000,
+        "bgMeteors": 0,
+        "hasShopPage": "function",
+        "api": {
+          "state": "function",
+          "liveInfo": "function",
+          "setTime": "function",
+          "upgrade": "function",
+          "giveStardust": "function",
+          "setCompanions": "function",
+          "spawnUFO": "function",
+          "killUFO": "function",
+          "saveFlight": "function",
+          "resumeFlight": "function",
+          "giveShield": "function",
+          "setShopPage": "function",
+          "clearSave": "function",
+          "unlockAll": "function",
+          "setPrimary": "function",
+          "setProgress": "function",
+          "jumpTo": "function",
+          "goto": "function"
+        }
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-caps\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/caps.json"
+    },
+    {
+      "id": "title",
+      "title": "桌面 · 标题",
+      "group": "desktop",
+      "query": "?screen=title&unlock=1",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=title&unlock=1",
+      "status": "pass",
+      "durationMs": 4540,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_title.png",
+      "screenshotVariance": 1442.93,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 1442.93,
+          "extra": {
+            "file": "reports/shots/v4qa_title.png",
+            "bytes": 1005301,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = title",
+          "status": "pass",
+          "expected": "title",
+          "actual": "title"
+        },
+        {
+          "id": "version",
+          "desc": "版本号 4.x",
+          "status": "pass",
+          "expected": "4.x",
+          "actual": "4.0.0"
+        }
+      ],
+      "checkCounts": {
+        "pass": 6,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "title",
+        "version": "4.0.0",
+        "bgMeteors": 0,
+        "stardust": 99999,
+        "owned": 9,
+        "live": {
+          "live": true
+        }
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-title\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/title.json"
+    },
+    {
+      "id": "hangar",
+      "title": "桌面 · 机库",
+      "group": "desktop",
+      "query": "?screen=hangar&unlock=1&rich=1&lv=5",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=hangar&unlock=1&rich=1&lv=5",
+      "status": "pass",
+      "durationMs": 4470,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_hangar.png",
+      "screenshotVariance": 1239.23,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 1239.23,
+          "extra": {
+            "file": "reports/shots/v4qa_hangar.png",
+            "bytes": 798835,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = hangar",
+          "status": "pass",
+          "expected": "hangar",
+          "actual": "hangar"
+        },
+        {
+          "id": "owned",
+          "desc": "机库可见已拥有角色（owned >= 9）",
+          "status": "pass",
+          "expected": ">=9",
+          "actual": 9
+        },
+        {
+          "id": "pilotLv",
+          "desc": "?lv=5 生效（pilotLv >= 5）",
+          "status": "pass",
+          "expected": ">=5",
+          "actual": 6
+        }
+      ],
+      "checkCounts": {
+        "pass": 7,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "hangar",
+        "owned": 9,
+        "primary": "deepseek",
+        "pilotLv": 6,
+        "companions": [
+          "",
+          ""
+        ]
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-hangar\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/hangar.json"
+    },
+    {
+      "id": "launch",
+      "title": "桌面 · 发射台",
+      "group": "desktop",
+      "query": "?screen=launch",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=launch",
+      "status": "pass",
+      "durationMs": 4165,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_launch.png",
+      "screenshotVariance": 3751.58,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 3751.58,
+          "extra": {
+            "file": "reports/shots/v4qa_launch.png",
+            "bytes": 176582,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = launch",
+          "status": "pass",
+          "expected": "launch",
+          "actual": "launch"
+        },
+        {
+          "id": "target",
+          "desc": "目标 = moon（首段）",
+          "status": "pass",
+          "expected": "moon",
+          "actual": "moon"
+        },
+        {
+          "id": "legKm",
+          "desc": "首段固定 384400 km",
+          "status": "pass",
+          "expected": 384400,
+          "actual": 384400
+        },
+        {
+          "id": "legLabel",
+          "desc": "航段距离文案非空",
+          "status": "pass",
+          "expected": "非空",
+          "actual": "38.44 万 km"
+        }
+      ],
+      "checkCounts": {
+        "pass": 8,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "launch",
+        "target": "moon",
+        "legKm": 384400,
+        "legLabel": "38.44 万 km",
+        "legLive": false,
+        "zoomP": 0
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-launch\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/launch.json"
+    },
+    {
+      "id": "launch-live-map",
+      "title": "桌面 · 实时太阳系地图（launch + hold + live）",
+      "group": "desktop",
+      "query": "?screen=launch&hold=1&live=1",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=launch&hold=1&live=1",
+      "status": "pass",
+      "durationMs": 4608,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_launch-live-map.png",
+      "screenshotVariance": 1033.78,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 1033.78,
+          "extra": {
+            "file": "reports/shots/v4qa_launch-live-map.png",
+            "bytes": 531749,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = launch",
+          "status": "pass",
+          "expected": "launch",
+          "actual": "launch"
+        },
+        {
+          "id": "hold-zoom",
+          "desc": "hold=1 使缩放停在实时地图（zoom.p >= 0.8）",
+          "status": "pass",
+          "expected": ">=0.8",
+          "actual": 0.86
+        },
+        {
+          "id": "clock",
+          "desc": "?live=1 固定时钟",
+          "status": "pass",
+          "expected": 1795003200000,
+          "actual": 1795003200000
+        },
+        {
+          "id": "live-flag",
+          "desc": "state().live.live === true",
+          "status": "pass",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "id": "live-planets-9",
+          "desc": "实时行星 9 颗（state().live.planets.length = 9）",
+          "status": "pass",
+          "expected": 9,
+          "actual": 9
+        },
+        {
+          "id": "live-totalau",
+          "desc": "实时总航程 totalAU > 0",
+          "status": "pass",
+          "expected": ">0",
+          "actual": 93.76059524213221
+        },
+        {
+          "id": "live-legs-9",
+          "desc": "liveInfo().legs 共 9 段",
+          "status": "pass",
+          "expected": 9,
+          "actual": 9
+        },
+        {
+          "id": "live-leg0-fixed",
+          "desc": "第 0 段（地球→月球）固定 384400 km 且 fixed=true",
+          "status": "pass",
+          "expected": "384400/fixed",
+          "actual": {
+            "km": 384400,
+            "fixed": true
+          }
+        },
+        {
+          "id": "live-leg1-km",
+          "desc": "第 1 段实时弦长 km > 0",
+          "status": "pass",
+          "expected": ">0",
+          "actual": 140106177.85552102
+        },
+        {
+          "id": "live-planet-lon",
+          "desc": "行星黄经与 src/astronomy.js 计算一致（误差 <= 0.1°）",
+          "status": "pass",
+          "expected": "全部 <=0.1°",
+          "actual": "最大 mercury 0°"
+        }
+      ],
+      "checkCounts": {
+        "pass": 14,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "launch",
+        "zoomP": 0.86,
+        "clockMs": 1795003200000,
+        "legKm": 384400,
+        "legLive": false,
+        "live": {
+          "live": true,
+          "iso": "2026-11-18 12:00:00 UTC",
+          "totalAU": 93.76059524213221,
+          "totalKm": 14026385403.787529,
+          "planets": 9
+        },
+        "liveLegs": [
+          {
+            "index": 0,
+            "km": 384400,
+            "au": 0.0025695552897999907,
+            "fixed": true,
+            "fromId": "earth",
+            "toId": "moon"
+          },
+          {
+            "index": 1,
+            "km": 140106177.85552102,
+            "au": 0.9365519522432684,
+            "fixed": false,
+            "fromId": "moon",
+            "toId": "mercury"
+          },
+          {
+            "index": 2,
+            "km": 90351818.8230794,
+            "au": 0.6039646045782884,
+            "fixed": false,
+            "fromId": "mercury",
+            "toId": "venus"
+          },
+          {
+            "index": 3,
+            "km": 169186876.45985693,
+            "au": 1.130944415640382,
+            "fixed": false,
+            "fromId": "venus",
+            "toId": "mars"
+          },
+          {
+            "index": 4,
+            "km": 589582641.3313304,
+            "au": 3.9411165317564274,
+            "fixed": false,
+            "fromId": "mars",
+            "toId": "jupiter"
+          },
+          {
+            "index": 5,
+            "km": 1955497548.4867554,
+            "au": 13.071693730242082,
+            "fixed": false,
+            "fromId": "jupiter",
+            "toId": "saturn"
+          },
+          {
+            "index": 6,
+            "km": 2290166459.553986,
+            "au": 15.308817223385695,
+            "fixed": false,
+            "fromId": "saturn",
+            "toId": "uranus"
+          },
+          {
+            "index": 7,
+            "km": 3942498843.9285855,
+            "au": 26.35397700168326,
+            "fixed": false,
+            "fromId": "uranus",
+            "toId": "neptune"
+          },
+          {
+            "index": 8,
+            "km": 4848610637.348415,
+            "au": 32.41096022731302,
+            "fixed": false,
+            "fromId": "neptune",
+            "toId": "pluto"
+          }
+        ],
+        "positions": {
+          "earth": {
+            "id": "earth",
+            "x": 0.5558809744736918,
+            "y": 0.8174133044584778,
+            "z": -0.00004986740001405881,
+            "rAU": 0.988518169066359,
+            "lonDeg": 55.78238415646903,
+            "latDeg": -0.0028903783933548,
+            "ms": 1795003200000
+          },
+          "mercury": {
+            "id": "mercury",
+            "x": -0.1953022216494945,
+            "y": 0.25945327527333417,
+            "z": 0.03911607372930734,
+            "rAU": 0.3270917716104846,
+            "lonDeg": 126.97043161361464,
+            "latDeg": 6.868294255491425,
+            "ms": 1795003200000
+          },
+          "venus": {
+            "id": "venus",
+            "x": 0.23430289193664688,
+            "y": 0.6817571930774634,
+            "z": -0.0041515928512936735,
+            "rAU": 0.7209077272480443,
+            "lonDeg": 71.03343620717692,
+            "latDeg": -0.32995909802929657,
+            "ms": 1795003200000
+          },
+          "mars": {
+            "id": "mars",
+            "x": -0.5157418116121488,
+            "y": 1.5267940375130267,
+            "z": 0.04464334021506177,
+            "rAU": 1.6121670747958687,
+            "lonDeg": 108.664658025746,
+            "latDeg": 1.5868094785986886,
+            "ms": 1795003200000
+          },
+          "jupiter": {
+            "id": "jupiter",
+            "x": -3.7623299609547387,
+            "y": 3.760959054733,
+            "z": 0.0685511059522779,
+            "rAU": 5.320210428225852,
+            "lonDeg": 135.0104405320041,
+            "latDeg": 0.7382786442404293,
+            "ms": 1795003200000
+          },
+          "saturn": {
+            "id": "saturn",
+            "x": 9.187459680154921,
+            "y": 2.0429603947774266,
+            "z": -0.401135845803803,
+            "rAU": 9.420404052687456,
+            "lonDeg": 12.536549129947868,
+            "latDeg": -2.440483664201937,
+            "ms": 1795003200000
+          },
+          "uranus": {
+            "id": "uranus",
+            "x": 8.756842241944792,
+            "y": 17.341671246440647,
+            "z": -0.049141984860328926,
+            "rAU": 19.427255663232803,
+            "lonDeg": 63.20807177174426,
+            "latDeg": -0.14493201617728993,
+            "ms": 1795003200000
+          },
+          "neptune": {
+            "id": "neptune",
+            "x": 29.828743411180398,
+            "y": 1.5284315803213016,
+            "z": -0.718870423174646,
+            "rAU": 29.876526091081555,
+            "lonDeg": 2.9332833658720254,
+            "latDeg": -1.3787485364503222,
+            "ms": 1795003200000
+          },
+          "pluto": {
+            "id": "pluto",
+            "x": 20.093188291168588,
+            "y": -29.32389098306578,
+            "z": -2.6742480865416702,
+            "rAU": 35.64797891773744,
+            "lonDeg": 304.41955133225457,
+            "latDeg": -4.302269443352019,
+            "ms": 1795003200000
+          },
+          "sun": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "_ms": 1795003200000,
+          "_iso": "2026-11-18 12:00:00 UTC"
+        }
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-launch-live-map\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/launch-live-map.json"
+    },
+    {
+      "id": "solar-live",
+      "title": "桌面 · ?screen=solar 实时太阳系图",
+      "group": "desktop",
+      "query": "?screen=solar&live=1",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=solar&live=1",
+      "status": "pass",
+      "durationMs": 4659,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_solar-live.png",
+      "screenshotVariance": 1038.72,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 1038.72,
+          "extra": {
+            "file": "reports/shots/v4qa_solar-live.png",
+            "bytes": 530254,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = launch",
+          "status": "pass",
+          "expected": "launch",
+          "actual": "launch"
+        },
+        {
+          "id": "solar-zoom",
+          "desc": "screen=solar 打开放大的太阳系地图（zoom.p >= 0.85）",
+          "status": "pass",
+          "expected": ">=0.85",
+          "actual": 0.9
+        },
+        {
+          "id": "live-flag",
+          "desc": "state().live.live === true",
+          "status": "pass",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "id": "live-planets-9",
+          "desc": "实时行星 9 颗（state().live.planets.length = 9）",
+          "status": "pass",
+          "expected": 9,
+          "actual": 9
+        },
+        {
+          "id": "live-totalau",
+          "desc": "实时总航程 totalAU > 0",
+          "status": "pass",
+          "expected": ">0",
+          "actual": 93.76059524213221
+        },
+        {
+          "id": "live-legs-9",
+          "desc": "liveInfo().legs 共 9 段",
+          "status": "pass",
+          "expected": 9,
+          "actual": 9
+        },
+        {
+          "id": "live-leg0-fixed",
+          "desc": "第 0 段（地球→月球）固定 384400 km 且 fixed=true",
+          "status": "pass",
+          "expected": "384400/fixed",
+          "actual": {
+            "km": 384400,
+            "fixed": true
+          }
+        },
+        {
+          "id": "live-leg1-km",
+          "desc": "第 1 段实时弦长 km > 0",
+          "status": "pass",
+          "expected": ">0",
+          "actual": 140106177.85552102
+        },
+        {
+          "id": "live-planet-lon",
+          "desc": "行星黄经与 src/astronomy.js 计算一致（误差 <= 0.1°）",
+          "status": "pass",
+          "expected": "全部 <=0.1°",
+          "actual": "最大 mercury 0°"
+        }
+      ],
+      "checkCounts": {
+        "pass": 13,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "launch",
+        "zoomP": 0.9,
+        "clockMs": 1795003200000,
+        "legKm": 384400,
+        "legLive": false,
+        "live": {
+          "live": true,
+          "iso": "2026-11-18 12:00:00 UTC",
+          "totalAU": 93.76059524213221,
+          "totalKm": 14026385403.787529,
+          "planets": 9
+        },
+        "liveLegs": [
+          {
+            "index": 0,
+            "km": 384400,
+            "au": 0.0025695552897999907,
+            "fixed": true,
+            "fromId": "earth",
+            "toId": "moon"
+          },
+          {
+            "index": 1,
+            "km": 140106177.85552102,
+            "au": 0.9365519522432684,
+            "fixed": false,
+            "fromId": "moon",
+            "toId": "mercury"
+          },
+          {
+            "index": 2,
+            "km": 90351818.8230794,
+            "au": 0.6039646045782884,
+            "fixed": false,
+            "fromId": "mercury",
+            "toId": "venus"
+          },
+          {
+            "index": 3,
+            "km": 169186876.45985693,
+            "au": 1.130944415640382,
+            "fixed": false,
+            "fromId": "venus",
+            "toId": "mars"
+          },
+          {
+            "index": 4,
+            "km": 589582641.3313304,
+            "au": 3.9411165317564274,
+            "fixed": false,
+            "fromId": "mars",
+            "toId": "jupiter"
+          },
+          {
+            "index": 5,
+            "km": 1955497548.4867554,
+            "au": 13.071693730242082,
+            "fixed": false,
+            "fromId": "jupiter",
+            "toId": "saturn"
+          },
+          {
+            "index": 6,
+            "km": 2290166459.553986,
+            "au": 15.308817223385695,
+            "fixed": false,
+            "fromId": "saturn",
+            "toId": "uranus"
+          },
+          {
+            "index": 7,
+            "km": 3942498843.9285855,
+            "au": 26.35397700168326,
+            "fixed": false,
+            "fromId": "uranus",
+            "toId": "neptune"
+          },
+          {
+            "index": 8,
+            "km": 4848610637.348415,
+            "au": 32.41096022731302,
+            "fixed": false,
+            "fromId": "neptune",
+            "toId": "pluto"
+          }
+        ],
+        "positions": {
+          "earth": {
+            "id": "earth",
+            "x": 0.5558809744736918,
+            "y": 0.8174133044584778,
+            "z": -0.00004986740001405881,
+            "rAU": 0.988518169066359,
+            "lonDeg": 55.78238415646903,
+            "latDeg": -0.0028903783933548,
+            "ms": 1795003200000
+          },
+          "mercury": {
+            "id": "mercury",
+            "x": -0.1953022216494945,
+            "y": 0.25945327527333417,
+            "z": 0.03911607372930734,
+            "rAU": 0.3270917716104846,
+            "lonDeg": 126.97043161361464,
+            "latDeg": 6.868294255491425,
+            "ms": 1795003200000
+          },
+          "venus": {
+            "id": "venus",
+            "x": 0.23430289193664688,
+            "y": 0.6817571930774634,
+            "z": -0.0041515928512936735,
+            "rAU": 0.7209077272480443,
+            "lonDeg": 71.03343620717692,
+            "latDeg": -0.32995909802929657,
+            "ms": 1795003200000
+          },
+          "mars": {
+            "id": "mars",
+            "x": -0.5157418116121488,
+            "y": 1.5267940375130267,
+            "z": 0.04464334021506177,
+            "rAU": 1.6121670747958687,
+            "lonDeg": 108.664658025746,
+            "latDeg": 1.5868094785986886,
+            "ms": 1795003200000
+          },
+          "jupiter": {
+            "id": "jupiter",
+            "x": -3.7623299609547387,
+            "y": 3.760959054733,
+            "z": 0.0685511059522779,
+            "rAU": 5.320210428225852,
+            "lonDeg": 135.0104405320041,
+            "latDeg": 0.7382786442404293,
+            "ms": 1795003200000
+          },
+          "saturn": {
+            "id": "saturn",
+            "x": 9.187459680154921,
+            "y": 2.0429603947774266,
+            "z": -0.401135845803803,
+            "rAU": 9.420404052687456,
+            "lonDeg": 12.536549129947868,
+            "latDeg": -2.440483664201937,
+            "ms": 1795003200000
+          },
+          "uranus": {
+            "id": "uranus",
+            "x": 8.756842241944792,
+            "y": 17.341671246440647,
+            "z": -0.049141984860328926,
+            "rAU": 19.427255663232803,
+            "lonDeg": 63.20807177174426,
+            "latDeg": -0.14493201617728993,
+            "ms": 1795003200000
+          },
+          "neptune": {
+            "id": "neptune",
+            "x": 29.828743411180398,
+            "y": 1.5284315803213016,
+            "z": -0.718870423174646,
+            "rAU": 29.876526091081555,
+            "lonDeg": 2.9332833658720254,
+            "latDeg": -1.3787485364503222,
+            "ms": 1795003200000
+          },
+          "pluto": {
+            "id": "pluto",
+            "x": 20.093188291168588,
+            "y": -29.32389098306578,
+            "z": -2.6742480865416702,
+            "rAU": 35.64797891773744,
+            "lonDeg": 304.41955133225457,
+            "latDeg": -4.302269443352019,
+            "ms": 1795003200000
+          },
+          "sun": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "_ms": 1795003200000,
+          "_iso": "2026-11-18 12:00:00 UTC"
+        }
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-solar-live\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/solar-live.json"
+    },
+    {
+      "id": "launch-live-time",
+      "title": "桌面 · 另一观测时刻（time=1900000000000）",
+      "group": "desktop",
+      "query": "?screen=launch&live=1&time=1900000000000",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=launch&live=1&time=1900000000000",
+      "status": "pass",
+      "durationMs": 4154,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_launch-live-time.png",
+      "screenshotVariance": 3751.58,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 3751.58,
+          "extra": {
+            "file": "reports/shots/v4qa_launch-live-time.png",
+            "bytes": 176582,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = launch",
+          "status": "pass",
+          "expected": "launch",
+          "actual": "launch"
+        },
+        {
+          "id": "clock",
+          "desc": "?time=1900000000000 覆盖固定时钟",
+          "status": "pass",
+          "expected": 1900000000000,
+          "actual": 1900000000000
+        },
+        {
+          "id": "live-flag",
+          "desc": "state().live.live === true",
+          "status": "pass",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "id": "live-totalau",
+          "desc": "该时刻实时总航程 totalAU > 0",
+          "status": "pass",
+          "expected": ">0",
+          "actual": 99.34779293282612
+        }
+      ],
+      "checkCounts": {
+        "pass": 8,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "launch",
+        "zoomP": 0,
+        "clockMs": 1900000000000,
+        "legKm": 384400,
+        "legLive": false,
+        "live": {
+          "live": true,
+          "iso": "2030-03-17 17:46:40 UTC",
+          "totalAU": 99.34779293282612,
+          "totalKm": 14862218281.495295,
+          "planets": 9
+        },
+        "liveLegs": [
+          {
+            "index": 0,
+            "km": 384400,
+            "au": 0.0025695552897999907,
+            "fixed": true,
+            "fromId": "earth",
+            "toId": "moon"
+          },
+          {
+            "index": 1,
+            "km": 192413532.86931533,
+            "au": 1.2862050239684015,
+            "fixed": false,
+            "fromId": "moon",
+            "toId": "mercury"
+          },
+          {
+            "index": 2,
+            "km": 156443380.24535555,
+            "au": 1.0457594049522494,
+            "fixed": false,
+            "fromId": "mercury",
+            "toId": "venus"
+          },
+          {
+            "index": 3,
+            "km": 318682311.2950297,
+            "au": 2.1302596741774997,
+            "fixed": false,
+            "fromId": "venus",
+            "toId": "mars"
+          },
+          {
+            "index": 4,
+            "km": 1008525954.9179868,
+            "au": 6.7415796107182615,
+            "fixed": false,
+            "fromId": "mars",
+            "toId": "jupiter"
+          },
+          {
+            "index": 5,
+            "km": 2168436645.036906,
+            "au": 14.495103672868694,
+            "fixed": false,
+            "fromId": "jupiter",
+            "toId": "saturn"
+          },
+          {
+            "index": 6,
+            "km": 1682864377.061178,
+            "au": 11.24925354342746,
+            "fixed": false,
+            "fromId": "saturn",
+            "toId": "uranus"
+          },
+          {
+            "index": 7,
+            "km": 4261649975.448555,
+            "au": 28.48737054549905,
+            "fixed": false,
+            "fromId": "uranus",
+            "toId": "neptune"
+          },
+          {
+            "index": 8,
+            "km": 5072817704.62097,
+            "au": 33.90969190192471,
+            "fixed": false,
+            "fromId": "neptune",
+            "toId": "pluto"
+          }
+        ],
+        "positions": {
+          "earth": {
+            "id": "earth",
+            "x": -0.9934759419792503,
+            "y": 0.05627271096830899,
+            "z": -0.000003856056209238768,
+            "rAU": 0.995068372176581,
+            "lonDeg": 176.75810231131024,
+            "latDeg": -0.00022203071922774676,
+            "ms": 1900000000000
+          },
+          "mercury": {
+            "id": "mercury",
+            "x": 0.2890191916103785,
+            "y": 0.1528823058095084,
+            "z": -0.014010361155508595,
+            "rAU": 0.32726347606852874,
+            "lonDeg": 27.877470019805322,
+            "latDeg": -2.4536192609142478,
+            "ms": 1900000000000
+          },
+          "venus": {
+            "id": "venus",
+            "x": -0.557665033167686,
+            "y": -0.459611934342002,
+            "z": 0.025856446332359638,
+            "rAU": 0.7231196133589873,
+            "lonDeg": 219.49439341408402,
+            "latDeg": 2.0491507768639328,
+            "ms": 1900000000000
+          },
+          "mars": {
+            "id": "mars",
+            "x": 1.2901480193320063,
+            "y": 0.5994326408801797,
+            "z": -0.01906337257939195,
+            "rAU": 1.422731462684714,
+            "lonDeg": 24.920672026417,
+            "latDeg": -0.7677369247709488,
+            "ms": 1900000000000
+          },
+          "jupiter": {
+            "id": "jupiter",
+            "x": -3.6195713598700685,
+            "y": -4.018999242649453,
+            "z": 0.09771934162394298,
+            "rAU": 5.409547190970419,
+            "lonDeg": 227.99332274367265,
+            "latDeg": 1.035060828865722,
+            "ms": 1900000000000
+          },
+          "saturn": {
+            "id": "saturn",
+            "x": 5.135266273899853,
+            "y": 7.525415795535671,
+            "z": -0.3350969238542921,
+            "rAU": 9.116750108889004,
+            "lonDeg": 55.690774902403774,
+            "latDeg": -2.1064485741744883,
+            "ms": 1900000000000
+          },
+          "uranus": {
+            "id": "uranus",
+            "x": 4.235995607542087,
+            "y": 18.733214317515273,
+            "z": 0.01457412678561456,
+            "rAU": 19.206175825974483,
+            "lonDeg": 77.25843219596779,
+            "latDeg": 0.04347747529795895,
+            "ms": 1900000000000
+          },
+          "neptune": {
+            "id": "neptune",
+            "x": 29.364618051169547,
+            "y": 5.337666523748927,
+            "z": -0.7866212221217527,
+            "rAU": 29.85615933366036,
+            "lonDeg": 10.302287309843798,
+            "latDeg": -1.5097485105961717,
+            "ms": 1900000000000
+          },
+          "pluto": {
+            "id": "pluto",
+            "x": 23.249742355989365,
+            "y": -27.884996032116184,
+            "z": -3.7413111914875286,
+            "rAU": 36.49823191282793,
+            "lonDeg": 309.8204172203376,
+            "latDeg": -5.883532445381264,
+            "ms": 1900000000000
+          },
+          "sun": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "_ms": 1900000000000,
+          "_iso": "2030-03-17 17:46:40 UTC"
+        }
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-launch-live-time\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/launch-live-time.json"
+    },
+    {
+      "id": "shop-p1",
+      "title": "桌面 · 商城（默认第 1 页）",
+      "group": "desktop",
+      "query": "?screen=shop&unlock=1&rich=1&lv=5",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=shop&unlock=1&rich=1&lv=5",
+      "status": "pass",
+      "durationMs": 4405,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_shop-p1.png",
+      "screenshotVariance": 1001.72,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 1001.72,
+          "extra": {
+            "file": "reports/shots/v4qa_shop-p1.png",
+            "bytes": 746014,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = shop",
+          "status": "pass",
+          "expected": "shop",
+          "actual": "shop"
+        },
+        {
+          "id": "page-0",
+          "desc": "默认第 1 页（shopPage = 0）",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0
+        },
+        {
+          "id": "pages-3",
+          "desc": "9 位角色 / 每页 3 张 = 3 页（shopPages = 3）",
+          "status": "pass",
+          "expected": 3,
+          "actual": 3
+        },
+        {
+          "id": "charCount",
+          "desc": "charCount = 9",
+          "status": "pass",
+          "expected": 9,
+          "actual": 9
+        },
+        {
+          "id": "charImages",
+          "desc": "角色立绘已加载（charImages >= 8）",
+          "status": "pass",
+          "expected": ">=8",
+          "actual": 8
+        }
+      ],
+      "checkCounts": {
+        "pass": 9,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "shop",
+        "shopPage": 0,
+        "shopPages": 3,
+        "charCount": 9,
+        "charImages": 8,
+        "owned": 9,
+        "stardust": 99999
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-shop-p1\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/shop-p1.json"
+    },
+    {
+      "id": "shop-p2",
+      "title": "桌面 · 商城第 2 页（setShopPage(1)）",
+      "group": "desktop",
+      "query": "?screen=shop&unlock=1&rich=1&lv=5",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=shop&unlock=1&rich=1&lv=5",
+      "status": "pass",
+      "durationMs": 4514,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_shop-p2.png",
+      "screenshotVariance": 873.42,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 873.42,
+          "extra": {
+            "file": "reports/shots/v4qa_shop-p2.png",
+            "bytes": 740028,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = shop",
+          "status": "pass",
+          "expected": "shop",
+          "actual": "shop"
+        },
+        {
+          "id": "before",
+          "desc": "默认在第 1 页",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0
+        },
+        {
+          "id": "setShopPage",
+          "desc": "翻到第 2 页（setShopPage 生效）",
+          "status": "pass",
+          "expected": 1,
+          "actual": {
+            "setReturn": 1,
+            "shopPage": 1
+          }
+        },
+        {
+          "id": "pages-3",
+          "desc": "页数 = 3",
+          "status": "pass",
+          "expected": 3,
+          "actual": 3
+        }
+      ],
+      "checkCounts": {
+        "pass": 8,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "before": 0,
+        "setReturn": 1,
+        "screen": "shop",
+        "shopPage": 1,
+        "shopPages": 3,
+        "charCount": 9
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-shop-p2\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/shop-p2.json"
+    },
+    {
+      "id": "shop-p3",
+      "title": "桌面 · 商城第 3 页（setShopPage(2)）",
+      "group": "desktop",
+      "query": "?screen=shop&unlock=1&rich=1&lv=5",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=shop&unlock=1&rich=1&lv=5",
+      "status": "pass",
+      "durationMs": 4432,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_shop-p3.png",
+      "screenshotVariance": 849.96,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 849.96,
+          "extra": {
+            "file": "reports/shots/v4qa_shop-p3.png",
+            "bytes": 731716,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = shop",
+          "status": "pass",
+          "expected": "shop",
+          "actual": "shop"
+        },
+        {
+          "id": "before",
+          "desc": "默认在第 1 页",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0
+        },
+        {
+          "id": "setShopPage",
+          "desc": "翻到第 3 页（setShopPage 生效）",
+          "status": "pass",
+          "expected": 2,
+          "actual": {
+            "setReturn": 2,
+            "shopPage": 2
+          }
+        },
+        {
+          "id": "pages-3",
+          "desc": "页数 = 3",
+          "status": "pass",
+          "expected": 3,
+          "actual": 3
+        }
+      ],
+      "checkCounts": {
+        "pass": 8,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "before": 0,
+        "setReturn": 2,
+        "screen": "shop",
+        "shopPage": 2,
+        "shopPages": 3,
+        "charCount": 9
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-shop-p3\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/shop-p3.json"
+    },
+    {
+      "id": "upgrade",
+      "title": "桌面 · 角色改装界面",
+      "group": "desktop",
+      "query": "?screen=upgrade&unlock=1&rich=1",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=upgrade&unlock=1&rich=1",
+      "status": "pass",
+      "durationMs": 4382,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_upgrade.png",
+      "screenshotVariance": 1116.94,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 1116.94,
+          "extra": {
+            "file": "reports/shots/v4qa_upgrade.png",
+            "bytes": 704944,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = upgrade",
+          "status": "pass",
+          "expected": "upgrade",
+          "actual": "upgrade"
+        },
+        {
+          "id": "charCount",
+          "desc": "可改装角色 9 位",
+          "status": "pass",
+          "expected": 9,
+          "actual": 9
+        },
+        {
+          "id": "upg-object",
+          "desc": "state().upg 是对象",
+          "status": "pass",
+          "expected": "object",
+          "actual": "object"
+        },
+        {
+          "id": "upgrades-fields",
+          "desc": "state().upgrades 含 maxHp/wokCap/accelMul",
+          "status": "pass",
+          "expected": "maxHp/wokCap/accelMul",
+          "actual": {
+            "maxHp": 4,
+            "wokCap": 1,
+            "accelMul": 1
+          }
+        }
+      ],
+      "checkCounts": {
+        "pass": 8,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "upgrade",
+        "charCount": 9,
+        "owned": 9,
+        "primary": "deepseek",
+        "upg": {
+          "deepseek": {
+            "hp": 0,
+            "shield": 0,
+            "accel": 0
+          }
+        },
+        "upgrades": {
+          "maxHp": 4,
+          "wokCap": 1,
+          "accelMul": 1,
+          "fuelMul": 1,
+          "pickupMul": 1
+        },
+        "stardust": 99999
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-upgrade\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/upgrade.json"
+    },
+    {
+      "id": "upgrade-action",
+      "title": "桌面 · 升级扣币并生效（chatgpt hp）",
+      "group": "desktop",
+      "query": "?screen=upgrade&unlock=1&rich=1",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=upgrade&unlock=1&rich=1",
+      "status": "pass",
+      "durationMs": 4332,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_upgrade-action.png",
+      "screenshotVariance": 1153.99,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 1153.99,
+          "extra": {
+            "file": "reports/shots/v4qa_upgrade-action.png",
+            "bytes": 694608,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = upgrade",
+          "status": "pass",
+          "expected": "upgrade",
+          "actual": "upgrade"
+        },
+        {
+          "id": "owned",
+          "desc": "unlockAll 后 owned 含 chatgpt",
+          "status": "pass",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "id": "primary",
+          "desc": "出战神切换为 chatgpt（setPrimary 生效）",
+          "status": "pass",
+          "expected": "chatgpt",
+          "actual": "chatgpt"
+        },
+        {
+          "id": "upgrade-ok",
+          "desc": "upgrade('chatgpt','hp') 返回 true",
+          "status": "pass",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "id": "cost",
+          "desc": "星辰币扣掉 hp 一级价格 120",
+          "status": "pass",
+          "expected": -120,
+          "actual": -120,
+          "note": "before=100149 after=100029（已预先解锁 a_upgrade 排除成就奖励干扰）"
+        },
+        {
+          "id": "level",
+          "desc": "state().upg.chatgpt.hp === 1",
+          "status": "pass",
+          "expected": 1,
+          "actual": 1,
+          "note": "before=0"
+        },
+        {
+          "id": "effect",
+          "desc": "state().upgrades.maxHp 增加 1",
+          "status": "pass",
+          "expected": 5,
+          "actual": 5
+        }
+      ],
+      "checkCounts": {
+        "pass": 11,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "ok": true,
+        "screen": "upgrade",
+        "primaryAfter": "chatgpt",
+        "stardustBefore": 100149,
+        "stardustAfter": 100029,
+        "delta": -120,
+        "hpLevelBefore": 0,
+        "hpLevelAfter": 1,
+        "maxHpBefore": 4,
+        "maxHpAfter": 5,
+        "ownedChatgpt": true,
+        "achvBefore": 1,
+        "achvAfter": 1
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-upgrade-action\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/upgrade-action.json"
+    },
+    {
+      "id": "flight-moon",
+      "title": "桌面 · 飞行（stop=moon progress=0.5）",
+      "group": "desktop",
+      "query": "?screen=flight&stop=moon&progress=0.5&live=1",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=flight&stop=moon&progress=0.5&live=1",
+      "status": "pass",
+      "durationMs": 4560,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_flight-moon.png",
+      "screenshotVariance": 817.64,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 817.64,
+          "extra": {
+            "file": "reports/shots/v4qa_flight-moon.png",
+            "bytes": 979530,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = flight",
+          "status": "pass",
+          "expected": "flight",
+          "actual": "flight"
+        },
+        {
+          "id": "target",
+          "desc": "目标 = moon",
+          "status": "pass",
+          "expected": "moon",
+          "actual": "moon"
+        },
+        {
+          "id": "current",
+          "desc": "起点 = earth",
+          "status": "pass",
+          "expected": "earth",
+          "actual": "earth"
+        },
+        {
+          "id": "legKm",
+          "desc": "月球段固定 384400 km",
+          "status": "pass",
+          "expected": 384400,
+          "actual": 384400
+        },
+        {
+          "id": "legLive",
+          "desc": "月球段 fixed（legLive = false）",
+          "status": "pass",
+          "expected": false,
+          "actual": false
+        },
+        {
+          "id": "progress",
+          "desc": "progress=0.5 生效（0.45~0.62）",
+          "status": "pass",
+          "expected": "0.45~0.62",
+          "actual": 0.5608
+        },
+        {
+          "id": "hp",
+          "desc": "maxHp = 3（deepseek 默认，pilotLv<5）",
+          "status": "pass",
+          "expected": 3,
+          "actual": 3
+        },
+        {
+          "id": "fuel",
+          "desc": "燃料 0~100",
+          "status": "pass",
+          "expected": "0~100",
+          "actual": 98.1
+        }
+      ],
+      "checkCounts": {
+        "pass": 12,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "flight",
+        "target": "moon",
+        "current": "earth",
+        "progress": 0.5608179374999975,
+        "legKm": 384400,
+        "legLive": false,
+        "legLabel": "38.44 万 km",
+        "hp": 3,
+        "maxHp": 3,
+        "fuel": 98.10330499999986,
+        "wokCap": 1
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-flight-moon\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/flight-moon.json"
+    },
+    {
+      "id": "flight-jupiter",
+      "title": "桌面 · 飞行（stop=jupiter 实时航段）",
+      "group": "desktop",
+      "query": "?screen=flight&stop=jupiter&live=1",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=flight&stop=jupiter&live=1",
+      "status": "pass",
+      "durationMs": 4830,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_flight-jupiter.png",
+      "screenshotVariance": 691.56,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 691.56,
+          "extra": {
+            "file": "reports/shots/v4qa_flight-jupiter.png",
+            "bytes": 961482,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = flight",
+          "status": "pass",
+          "expected": "flight",
+          "actual": "flight"
+        },
+        {
+          "id": "target",
+          "desc": "目标 = jupiter",
+          "status": "pass",
+          "expected": "jupiter",
+          "actual": "jupiter"
+        },
+        {
+          "id": "legKm",
+          "desc": "航段距离 > 0",
+          "status": "pass",
+          "expected": ">0",
+          "actual": 589582641.3313304
+        },
+        {
+          "id": "legLive",
+          "desc": "太阳系航段为实时测算（legLive = true）",
+          "status": "pass",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "id": "leg-cross-astronomy",
+          "desc": "state().legKm 与 src/astronomy.js A.liveSolarLeg(idx) 一致（误差 <0.5%）",
+          "status": "pass",
+          "expected": "误差<0.5%",
+          "actual": "page=589582641.3km ref=589582641.3km 误差=0%"
+        },
+        {
+          "id": "leg-internal",
+          "desc": "state().legKm 与 liveInfo().legs[idx].km 一致",
+          "status": "pass",
+          "expected": {
+            "idx": 4,
+            "km": 589582641.3313304
+          },
+          "actual": 589582641.3313304
+        }
+      ],
+      "checkCounts": {
+        "pass": 10,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "flight",
+        "target": "jupiter",
+        "legKm": 589582641.3313304,
+        "legAU": 3.9411165317564274,
+        "legLive": true,
+        "legLabel": "5.90 亿 km",
+        "progress": 0.050085531006483844,
+        "clockMs": 1795003200000,
+        "live": {
+          "live": true,
+          "totalAU": 93.76059524213221
+        },
+        "liveLegs": [
+          {
+            "index": 0,
+            "km": 384400,
+            "au": 0.0025695552897999907,
+            "fixed": true
+          },
+          {
+            "index": 1,
+            "km": 140106177.85552102,
+            "au": 0.9365519522432684,
+            "fixed": false
+          },
+          {
+            "index": 2,
+            "km": 90351818.8230794,
+            "au": 0.6039646045782884,
+            "fixed": false
+          },
+          {
+            "index": 3,
+            "km": 169186876.45985693,
+            "au": 1.130944415640382,
+            "fixed": false
+          },
+          {
+            "index": 4,
+            "km": 589582641.3313304,
+            "au": 3.9411165317564274,
+            "fixed": false
+          },
+          {
+            "index": 5,
+            "km": 1955497548.4867554,
+            "au": 13.071693730242082,
+            "fixed": false
+          },
+          {
+            "index": 6,
+            "km": 2290166459.553986,
+            "au": 15.308817223385695,
+            "fixed": false
+          },
+          {
+            "index": 7,
+            "km": 3942498843.9285855,
+            "au": 26.35397700168326,
+            "fixed": false
+          },
+          {
+            "index": 8,
+            "km": 4848610637.348415,
+            "au": 32.41096022731302,
+            "fixed": false
+          }
+        ]
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-flight-jupiter\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/flight-jupiter.json"
+    },
+    {
+      "id": "flight-sirius",
+      "title": "桌面 · 恒星飞行（stop=sirius progress=0.7，银河贴图）",
+      "group": "desktop",
+      "query": "?screen=flight&stop=sirius&progress=0.7&live=1",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=flight&stop=sirius&progress=0.7&live=1",
+      "status": "pass",
+      "durationMs": 4824,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_flight-sirius.png",
+      "screenshotVariance": 1853.39,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 1853.39,
+          "extra": {
+            "file": "reports/shots/v4qa_flight-sirius.png",
+            "bytes": 1009410,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = flight",
+          "status": "pass",
+          "expected": "flight",
+          "actual": "flight"
+        },
+        {
+          "id": "target",
+          "desc": "目标 = sirius（天狼星）",
+          "status": "pass",
+          "expected": "sirius",
+          "actual": "sirius"
+        },
+        {
+          "id": "legLy",
+          "desc": "恒星航段距离 legLy > 0",
+          "status": "pass",
+          "expected": ">0",
+          "actual": 0.745000000000001
+        },
+        {
+          "id": "progress",
+          "desc": "progress=0.7 生效（0.66~0.80）",
+          "status": "pass",
+          "expected": "0.66~0.80",
+          "actual": 0.7503
+        },
+        {
+          "id": "legLabel",
+          "desc": "航段文案含光年单位",
+          "status": "pass",
+          "expected": "光年",
+          "actual": "0.75 光年"
+        }
+      ],
+      "checkCounts": {
+        "pass": 9,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "flight",
+        "target": "sirius",
+        "legLy": 0.745000000000001,
+        "legKm": 7048244202072.706,
+        "legLabel": "0.75 光年",
+        "progress": 0.7503310979543955,
+        "legLive": false,
+        "starTextures": 13
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-flight-sirius\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/flight-sirius.json"
+    },
+    {
+      "id": "arrive-mars",
+      "title": "桌面 · 抵达（stop=mars）",
+      "group": "desktop",
+      "query": "?screen=arrive&stop=mars&unlock=1",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=arrive&stop=mars&unlock=1",
+      "status": "pass",
+      "durationMs": 4515,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_arrive-mars.png",
+      "screenshotVariance": 996.55,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 996.55,
+          "extra": {
+            "file": "reports/shots/v4qa_arrive-mars.png",
+            "bytes": 930014,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = arrive",
+          "status": "pass",
+          "expected": "arrive",
+          "actual": "arrive"
+        },
+        {
+          "id": "stardust",
+          "desc": "星辰币非负",
+          "status": "pass",
+          "expected": ">=0",
+          "actual": 99999
+        }
+      ],
+      "checkCounts": {
+        "pass": 6,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "arrive",
+        "trip": 4,
+        "target": "jupiter",
+        "stardust": 99999
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-arrive-mars\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/arrive-mars.json"
+    },
+    {
+      "id": "ending",
+      "title": "桌面 · 结局",
+      "group": "desktop",
+      "query": "?screen=ending&unlock=1",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=ending&unlock=1",
+      "status": "pass",
+      "durationMs": 4619,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_ending.png",
+      "screenshotVariance": 975.39,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 975.39,
+          "extra": {
+            "file": "reports/shots/v4qa_ending.png",
+            "bytes": 1136979,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = ending",
+          "status": "pass",
+          "expected": "ending",
+          "actual": "ending"
+        }
+      ],
+      "checkCounts": {
+        "pass": 5,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "ending",
+        "achievements": 0
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-ending\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/ending.json"
+    },
+    {
+      "id": "help",
+      "title": "桌面 · 帮助",
+      "group": "desktop",
+      "query": "?screen=help",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=help",
+      "status": "pass",
+      "durationMs": 4403,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_help.png",
+      "screenshotVariance": 1217.01,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 1217.01,
+          "extra": {
+            "file": "reports/shots/v4qa_help.png",
+            "bytes": 759433,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = help",
+          "status": "pass",
+          "expected": "help",
+          "actual": "help"
+        }
+      ],
+      "checkCounts": {
+        "pass": 5,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "help"
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-help\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/help.json"
+    },
+    {
+      "id": "achv",
+      "title": "桌面 · 成就",
+      "group": "desktop",
+      "query": "?screen=achv&unlock=1&live=1",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=achv&unlock=1&live=1",
+      "status": "pass",
+      "durationMs": 4436,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_achv.png",
+      "screenshotVariance": 424.13,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 424.13,
+          "extra": {
+            "file": "reports/shots/v4qa_achv.png",
+            "bytes": 843871,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = achv",
+          "status": "pass",
+          "expected": "achv",
+          "actual": "achv"
+        },
+        {
+          "id": "achievements-array",
+          "desc": "state().achievements 是数组",
+          "status": "pass",
+          "expected": "array",
+          "actual": "object"
+        }
+      ],
+      "checkCounts": {
+        "pass": 6,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "achv",
+        "achievements": [],
+        "count": 0
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-achv\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/achv.json"
+    },
+    {
+      "id": "partners-ufo",
+      "title": "桌面 · 伙伴同行 + 自动反击击毁 UFO",
+      "group": "feature",
+      "query": "?screen=flight&stop=moon&live=1",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=flight&stop=moon&live=1",
+      "status": "pass",
+      "durationMs": 11507,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_partners-ufo.png",
+      "screenshotVariance": 1092.92,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 60）",
+          "status": "pass",
+          "expected": "> 60",
+          "actual": 1092.92,
+          "extra": {
+            "file": "reports/shots/v4qa_partners-ufo.png",
+            "bytes": 987074,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = flight",
+          "status": "pass",
+          "expected": "flight",
+          "actual": "flight"
+        },
+        {
+          "id": "companions-in-flight",
+          "desc": "setCompanions([chatgpt,claude]) 后随行伙伴 2 名",
+          "status": "pass",
+          "expected": 2,
+          "actual": 2
+        },
+        {
+          "id": "ufo-kill",
+          "desc": "伙伴自动反击击毁 UFO（ufoKills 增加）或 UFO 已离场（ufos=0）",
+          "status": "pass",
+          "expected": "kills>0",
+          "actual": "kills=1（尝试 1 次，5742ms）"
+        },
+        {
+          "id": "companion-shield-array",
+          "desc": "伙伴护盾数组存在（compShields 可持久化）",
+          "status": "pass",
+          "expected": "2 槽数组",
+          "actual": [
+            0,
+            0
+          ]
+        }
+      ],
+      "checkCounts": {
+        "pass": 8,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "companionsInFlight": 2,
+        "companionsQueued": 2,
+        "baseKills": 0,
+        "attempts": 1,
+        "killed": true,
+        "elapsed": 5742,
+        "ufoKills": 1,
+        "ufos": 1,
+        "screen": "flight",
+        "friendBullets": 0,
+        "companionShields": [
+          0,
+          0
+        ],
+        "samples": [
+          {
+            "t": 267,
+            "kills": 0,
+            "ufos": 1,
+            "fb": 0,
+            "screen": "flight"
+          },
+          {
+            "t": 533,
+            "kills": 0,
+            "ufos": 1,
+            "fb": 0,
+            "screen": "flight"
+          },
+          {
+            "t": 1017,
+            "kills": 0,
+            "ufos": 1,
+            "fb": 0,
+            "screen": "flight"
+          },
+          {
+            "t": 1296,
+            "kills": 0,
+            "ufos": 1,
+            "fb": 0,
+            "screen": "flight"
+          },
+          {
+            "t": 1554,
+            "kills": 0,
+            "ufos": 1,
+            "fb": 0,
+            "screen": "flight"
+          },
+          {
+            "t": 1817,
+            "kills": 0,
+            "ufos": 1,
+            "fb": 0,
+            "screen": "flight"
+          },
+          {
+            "t": 2067,
+            "kills": 0,
+            "ufos": 1,
+            "fb": 0,
+            "screen": "flight"
+          },
+          {
+            "t": 2332,
+            "kills": 0,
+            "ufos": 1,
+            "fb": 0,
+            "screen": "flight"
+          },
+          {
+            "t": 2599,
+            "kills": 0,
+            "ufos": 2,
+            "fb": 0,
+            "screen": "flight"
+          },
+          {
+            "t": 2849,
+            "kills": 0,
+            "ufos": 2,
+            "fb": 0,
+            "screen": "flight"
+          },
+          {
+            "t": 3099,
+            "kills": 0,
+            "ufos": 2,
+            "fb": 0,
+            "screen": "flight"
+          },
+          {
+            "t": 3373,
+            "kills": 0,
+            "ufos": 2,
+            "fb": 0,
+            "screen": "flight"
+          },
+          {
+            "t": 3632,
+            "kills": 0,
+            "ufos": 2,
+            "fb": 0,
+            "screen": "flight"
+          },
+          {
+            "t": 3883,
+            "kills": 0,
+            "ufos": 2,
+            "fb": 0,
+            "screen": "flight"
+          },
+          {
+            "t": 4151,
+            "kills": 0,
+            "ufos": 2,
+            "fb": 0,
+            "screen": "flight"
+          },
+          {
+            "t": 4418,
+            "kills": 0,
+            "ufos": 2,
+            "fb": 0,
+            "screen": "flight"
+          },
+          {
+            "t": 4701,
+            "kills": 0,
+            "ufos": 2,
+            "fb": 0,
+            "screen": "flight"
+          },
+          {
+            "t": 4967,
+            "kills": 0,
+            "ufos": 2,
+            "fb": 0,
+            "screen": "flight"
+          },
+          {
+            "t": 5219,
+            "kills": 0,
+            "ufos": 2,
+            "fb": 0,
+            "screen": "flight"
+          },
+          {
+            "t": 5485,
+            "kills": 0,
+            "ufos": 2,
+            "fb": 0,
+            "screen": "flight"
+          },
+          {
+            "t": 5742,
+            "kills": 1,
+            "ufos": 1,
+            "fb": 0,
+            "screen": "flight"
+          }
+        ]
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-partners-ufo\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/partners-ufo.json"
+    },
+    {
+      "id": "shield-cap",
+      "title": "桌面 · 护盾叠加受 wokCap 约束",
+      "group": "feature",
+      "query": "?screen=flight&stop=moon&unlock=1&rich=1",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=flight&stop=moon&unlock=1&rich=1",
+      "status": "pass",
+      "durationMs": 4473,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_shield-cap.png",
+      "screenshotVariance": 615.44,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 615.44,
+          "extra": {
+            "file": "reports/shots/v4qa_shield-cap.png",
+            "bytes": 951212,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = flight",
+          "status": "pass",
+          "expected": "flight",
+          "actual": "flight"
+        },
+        {
+          "id": "cap",
+          "desc": "护盾上限 wokCap >= 1",
+          "status": "pass",
+          "expected": ">=1",
+          "actual": 1
+        },
+        {
+          "id": "no-overflow",
+          "desc": "giveShield(12) 后 wokCount <= wokCap",
+          "status": "pass",
+          "expected": "<= 1",
+          "actual": 1
+        },
+        {
+          "id": "gained",
+          "desc": "至少获得 1 层护盾（wokCount >= 1）",
+          "status": "pass",
+          "expected": ">=1",
+          "actual": 1
+        }
+      ],
+      "checkCounts": {
+        "pass": 8,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "flight",
+        "before": 0,
+        "capBefore": 1,
+        "after": 1,
+        "cap": 1,
+        "companionShields": []
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-shield-cap\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/shield-cap.json"
+    },
+    {
+      "id": "resume-flight",
+      "title": "桌面 · 续飞（saveFlight → resumeFlight）",
+      "group": "feature",
+      "query": "?screen=flight&stop=moon&progress=0.5&live=1",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=flight&stop=moon&progress=0.5&live=1",
+      "status": "pass",
+      "durationMs": 4523,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_resume-flight.png",
+      "screenshotVariance": 589.48,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 589.48,
+          "extra": {
+            "file": "reports/shots/v4qa_resume-flight.png",
+            "bytes": 922322,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = flight",
+          "status": "pass",
+          "expected": "flight",
+          "actual": "flight"
+        },
+        {
+          "id": "saved",
+          "desc": "saveFlight() 返回 true",
+          "status": "pass",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "id": "flightSaved",
+          "desc": "state().flightSaved === true",
+          "status": "pass",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "id": "saved-progress",
+          "desc": "state().savedFlight.progress 接近 0.5（±0.02）",
+          "status": "pass",
+          "expected": "≈0.5",
+          "actual": 0.5
+        },
+        {
+          "id": "saved-trip",
+          "desc": "savedFlight.trip = 0（第 1 段）",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0
+        },
+        {
+          "id": "resumed",
+          "desc": "resumeFlight() 返回 true",
+          "status": "pass",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "id": "resume-screen",
+          "desc": "resumeFlight() 后 screen === 'flight'",
+          "status": "pass",
+          "expected": "flight",
+          "actual": "flight"
+        },
+        {
+          "id": "resume-progress",
+          "desc": "恢复后 progress 保持 0.5（±0.02）",
+          "status": "pass",
+          "expected": "≈0.5",
+          "actual": 0.5
+        }
+      ],
+      "checkCounts": {
+        "pass": 12,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "saved": true,
+        "s1Screen": "flight",
+        "s1Saved": true,
+        "s1Prog": 0.5,
+        "s1Trip": 0,
+        "resumed": true,
+        "screen": "flight",
+        "s2Screen": "flight",
+        "s2Prog": 0.5,
+        "s2Saved": 0.5
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-resume-flight\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/resume-flight.json"
+    },
+    {
+      "id": "save-p1",
+      "title": "持久化 1/3 · 飞行中存档（复用 profile）",
+      "group": "persist",
+      "query": "?screen=flight&stop=moon&progress=0.5",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=flight&stop=moon&progress=0.5",
+      "status": "pass",
+      "durationMs": 4348,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_save-p1.png",
+      "screenshotVariance": 781.8,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 781.8,
+          "extra": {
+            "file": "reports/shots/v4qa_save-p1.png",
+            "bytes": 975462,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = flight",
+          "status": "pass",
+          "expected": "flight",
+          "actual": "flight"
+        },
+        {
+          "id": "saved",
+          "desc": "saveFlight() 返回 true",
+          "status": "pass",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "id": "flightSaved",
+          "desc": "state().flightSaved === true",
+          "status": "pass",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "id": "progress",
+          "desc": "savedFlight.progress === 0.5",
+          "status": "pass",
+          "expected": "0.5",
+          "actual": 0.5
+        },
+        {
+          "id": "trip",
+          "desc": "savedFlight.trip === 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0
+        },
+        {
+          "id": "localStorage",
+          "desc": "localStorage 已写入 fatfish_universe_save_v4",
+          "status": "pass",
+          "expected": ">0",
+          "actual": 459
+        }
+      ],
+      "checkCounts": {
+        "pass": 10,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "saved": true,
+        "flightSaved": true,
+        "prog": 0.5,
+        "trip": 0,
+        "screen": "flight",
+        "rawSaveLen": 459
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-save-p1\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/save-p1.json"
+    },
+    {
+      "id": "save-p2",
+      "title": "持久化 2/3 · 同一 profile 重开标题并续飞",
+      "group": "persist",
+      "query": "?screen=title",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=title",
+      "status": "pass",
+      "durationMs": 4700,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_save-p2.png",
+      "screenshotVariance": 834.5,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 834.5,
+          "extra": {
+            "file": "reports/shots/v4qa_save-p2.png",
+            "bytes": 970240,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "boot-screen",
+          "desc": "重开后默认在标题页",
+          "status": "pass",
+          "expected": "title",
+          "actual": "title"
+        },
+        {
+          "id": "persisted",
+          "desc": "state().flightSaved === true（跨 run 持久化）",
+          "status": "pass",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "id": "persisted-progress",
+          "desc": "savedFlight.progress ≈ 0.5（±0.05，上一轮落盘时可能有几百 ms 飞行推进）",
+          "status": "pass",
+          "expected": "≈0.5",
+          "actual": 0.5172
+        },
+        {
+          "id": "persisted-trip",
+          "desc": "savedFlight.trip = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0
+        },
+        {
+          "id": "resume",
+          "desc": "resumeFlight() 返回 true",
+          "status": "pass",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "id": "resume-screen",
+          "desc": "续飞后 screen === 'flight'",
+          "status": "pass",
+          "expected": "flight",
+          "actual": "flight"
+        },
+        {
+          "id": "resume-progress",
+          "desc": "续飞后 progress 从 0.5 附近继续（0.48~0.60）",
+          "status": "pass",
+          "expected": "0.48~0.60",
+          "actual": 0.5313
+        }
+      ],
+      "checkCounts": {
+        "pass": 11,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "before": {
+          "screen": "title",
+          "flightSaved": true,
+          "prog": 0.5172095624999993,
+          "trip": 0
+        },
+        "resumed": true,
+        "screen": "flight",
+        "progress": 0.5313289999999987,
+        "savedProg": 0.5172095624999993,
+        "savedTrip": 0
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-save-p2\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/save-p2.json"
+    },
+    {
+      "id": "save-p3",
+      "title": "持久化 3/3 · ?resume=1 URL 参数续飞",
+      "group": "persist",
+      "query": "?resume=1",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?resume=1",
+      "status": "pass",
+      "durationMs": 4844,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_save-p3.png",
+      "screenshotVariance": 897.12,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 897.12,
+          "extra": {
+            "file": "reports/shots/v4qa_save-p3.png",
+            "bytes": 977967,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "flightSaved",
+          "desc": "?resume=1 启动时读到存档（flightSaved=true）",
+          "status": "pass",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "id": "auto-resume",
+          "desc": "?resume=1 直接进入飞行（screen === 'flight'）",
+          "status": "pass",
+          "expected": "flight",
+          "actual": "flight"
+        },
+        {
+          "id": "saved-progress",
+          "desc": "启动时读到的存档进度 0.45~0.75（由上一轮飞行落盘）",
+          "status": "pass",
+          "expected": "0.45~0.75",
+          "actual": 0.6038
+        },
+        {
+          "id": "continue-from-saved",
+          "desc": "续飞后进度从存档值继续（+0~+0.12）",
+          "status": "pass",
+          "expected": "+0~+0.12",
+          "actual": 0.0166
+        }
+      ],
+      "checkCounts": {
+        "pass": 8,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "before": {
+          "screen": "flight",
+          "flightSaved": true,
+          "prog": 0.6038215624999957
+        },
+        "screen": "flight",
+        "progress": 0.620411624999995,
+        "savedProg": 0.6038215624999957
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-save-p3\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/save-p3.json"
+    },
+    {
+      "id": "url-flight",
+      "title": "桌面 · ?flight=1 构造飞行中存档（标题页显示继续飞行）",
+      "group": "persist",
+      "query": "?flight=1&progress=0.42",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?flight=1&progress=0.42",
+      "status": "pass",
+      "durationMs": 4297,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_url-flight.png",
+      "screenshotVariance": 1512.93,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 1512.93,
+          "extra": {
+            "file": "reports/shots/v4qa_url-flight.png",
+            "bytes": 1000071,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = title",
+          "status": "pass",
+          "expected": "title",
+          "actual": "title"
+        },
+        {
+          "id": "flightSaved",
+          "desc": "?flight=1 构造出飞行存档（flightSaved=true）",
+          "status": "pass",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "id": "progress",
+          "desc": "savedFlight.progress ≈ 0.42",
+          "status": "pass",
+          "expected": "0.42",
+          "actual": 0.42
+        },
+        {
+          "id": "trip",
+          "desc": "savedFlight.trip = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0
+        }
+      ],
+      "checkCounts": {
+        "pass": 8,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "title",
+        "flightSaved": true,
+        "saved": {
+          "trip": 0,
+          "progress": 0.42,
+          "runCoins": 88,
+          "hp": 3,
+          "maxHp": 3,
+          "fuel": 72,
+          "wokCount": 1,
+          "compShields": [],
+          "savedAt": 1795008798400
+        }
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-url-flight\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/url-flight.json"
+    },
+    {
+      "id": "bg-static",
+      "title": "桌面 · 非飞行界面静态背景（无背景流星）",
+      "group": "feature",
+      "query": "?screen=title&unlock=1",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=title&unlock=1",
+      "status": "pass",
+      "durationMs": 4623,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_bg-static.png",
+      "screenshotVariance": 1442.92,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 80）",
+          "status": "pass",
+          "expected": "> 80",
+          "actual": 1442.92,
+          "extra": {
+            "file": "reports/shots/v4qa_bg-static.png",
+            "bytes": 1005451,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = title",
+          "status": "pass",
+          "expected": "title",
+          "actual": "title"
+        },
+        {
+          "id": "no-meteors",
+          "desc": "标题页背景流星数 = 0（非飞行界面不出现流星）",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0
+        },
+        {
+          "id": "static-mode-src",
+          "desc": "render 已实现 drawSpaceBg(t,warm,mode) 的 static 分支（构建产物静态扫描）",
+          "status": "pass",
+          "expected": "drawSpaceBg(t,warm,mode) + >=4 处 static 调用",
+          "actual": {
+            "hasSig": true,
+            "staticBranches": 5
+          }
+        }
+      ],
+      "checkCounts": {
+        "pass": 7,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "title",
+        "bgMeteors": 0,
+        "clockMs": 0
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-bg-static\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/bg-static.json"
+    },
+    {
+      "id": "bg-meteors",
+      "title": "桌面 · 飞行 8s 记录背景流星（仅记录）",
+      "group": "feature",
+      "query": "?screen=flight&stop=moon&live=1",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=flight&stop=moon&live=1",
+      "status": "pass",
+      "durationMs": 11923,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_bg-meteors.png",
+      "screenshotVariance": 834.48,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 60）",
+          "status": "pass",
+          "expected": "> 60",
+          "actual": 834.48,
+          "extra": {
+            "file": "reports/shots/v4qa_bg-meteors.png",
+            "bytes": 980442,
+            "width": 1280,
+            "height": 800
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = flight",
+          "status": "pass",
+          "expected": "flight",
+          "actual": "flight"
+        },
+        {
+          "id": "bgMeteors",
+          "desc": "背景流星数（仅记录，随机 3.5~7s 最多 1 道）",
+          "status": "info",
+          "actual": {
+            "max": 1,
+            "now": 0,
+            "seenSamples": 8,
+            "samples": 38
+          },
+          "note": "飞行 8s 内每 200ms 采样，记录同时在场最大值（不设数量断言）"
+        }
+      ],
+      "checkCounts": {
+        "pass": 5,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 1
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "flight",
+        "bgMeteors": 1,
+        "bgMeteorsNow": 0,
+        "bgMeteorsSeenSamples": 8,
+        "samples": 38,
+        "progress": 0.32566893750000164,
+        "hp": 3
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-bg-meteors\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/bg-meteors.json"
+    },
+    {
+      "id": "m-title",
+      "title": "移动端 · 标题",
+      "group": "mobile",
+      "query": "?screen=title&unlock=1",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=title&unlock=1",
+      "status": "pass",
+      "durationMs": 4181,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_m-title.png",
+      "screenshotVariance": 1588.82,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 100）",
+          "status": "pass",
+          "expected": "> 100",
+          "actual": 1588.82,
+          "extra": {
+            "file": "reports/shots/v4qa_m-title.png",
+            "bytes": 349400,
+            "width": 390,
+            "height": 844
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = title",
+          "status": "pass",
+          "expected": "title",
+          "actual": "title"
+        }
+      ],
+      "checkCounts": {
+        "pass": 5,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "title",
+        "shopPage": 0,
+        "charCount": 9,
+        "charImages": 8,
+        "bgMeteors": 0,
+        "primary": "deepseek",
+        "target": "moon",
+        "legKm": null
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-m-title\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/m-title.json"
+    },
+    {
+      "id": "m-shop",
+      "title": "移动端 · 商城（窄屏列表）",
+      "group": "mobile",
+      "query": "?screen=shop&unlock=1&rich=1&lv=5",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=shop&unlock=1&rich=1&lv=5",
+      "status": "pass",
+      "durationMs": 4227,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_m-shop.png",
+      "screenshotVariance": 1539.73,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 100）",
+          "status": "pass",
+          "expected": "> 100",
+          "actual": 1539.73,
+          "extra": {
+            "file": "reports/shots/v4qa_m-shop.png",
+            "bytes": 288535,
+            "width": 390,
+            "height": 844
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = shop",
+          "status": "pass",
+          "expected": "shop",
+          "actual": "shop"
+        },
+        {
+          "id": "page-0",
+          "desc": "默认第 1 页",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0
+        },
+        {
+          "id": "charCount",
+          "desc": "9 位角色",
+          "status": "pass",
+          "expected": 9,
+          "actual": 9
+        }
+      ],
+      "checkCounts": {
+        "pass": 7,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "shop",
+        "shopPage": 0,
+        "charCount": 9,
+        "charImages": 8,
+        "bgMeteors": 0,
+        "primary": "deepseek",
+        "target": "moon",
+        "legKm": null
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-m-shop\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/m-shop.json"
+    },
+    {
+      "id": "m-upgrade",
+      "title": "移动端 · 角色改装",
+      "group": "mobile",
+      "query": "?screen=upgrade&unlock=1&rich=1",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=upgrade&unlock=1&rich=1",
+      "status": "pass",
+      "durationMs": 4203,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_m-upgrade.png",
+      "screenshotVariance": 1485.6,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 100）",
+          "status": "pass",
+          "expected": "> 100",
+          "actual": 1485.6,
+          "extra": {
+            "file": "reports/shots/v4qa_m-upgrade.png",
+            "bytes": 228867,
+            "width": 390,
+            "height": 844
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = upgrade",
+          "status": "pass",
+          "expected": "upgrade",
+          "actual": "upgrade"
+        },
+        {
+          "id": "charCount",
+          "desc": "9 位角色",
+          "status": "pass",
+          "expected": 9,
+          "actual": 9
+        }
+      ],
+      "checkCounts": {
+        "pass": 6,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "upgrade",
+        "shopPage": 0,
+        "charCount": 9,
+        "charImages": 8,
+        "bgMeteors": 0,
+        "primary": "deepseek",
+        "target": "moon",
+        "legKm": null
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-m-upgrade\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/m-upgrade.json"
+    },
+    {
+      "id": "m-flight",
+      "title": "移动端 · 飞行",
+      "group": "mobile",
+      "query": "?screen=flight&stop=moon&live=1",
+      "url": "file:///C:/Users/admin/Desktop/FatFish-Playable/index.html?screen=flight&stop=moon&live=1",
+      "status": "pass",
+      "durationMs": 4295,
+      "cdpExitCode": 0,
+      "cdpOk": true,
+      "consoleErrorCount": 0,
+      "exceptionCount": 0,
+      "networkFailureCount": 0,
+      "screenshot": "reports/shots/v4qa_m-flight.png",
+      "screenshotVariance": 736.02,
+      "checks": [
+        {
+          "id": "loaded",
+          "desc": "页面加载完成（readyState = complete）",
+          "status": "pass",
+          "expected": "complete",
+          "actual": "complete"
+        },
+        {
+          "id": "console",
+          "desc": "console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0/0",
+          "actual": "0/0",
+          "raw": []
+        },
+        {
+          "id": "network",
+          "desc": "资源加载失败 = 0",
+          "status": "pass",
+          "expected": 0,
+          "actual": 0,
+          "raw": []
+        },
+        {
+          "id": "shot",
+          "desc": "截图存在且非空白（方差 > 100）",
+          "status": "pass",
+          "expected": "> 100",
+          "actual": 736.02,
+          "extra": {
+            "file": "reports/shots/v4qa_m-flight.png",
+            "bytes": 352502,
+            "width": 390,
+            "height": 844
+          }
+        },
+        {
+          "id": "screen",
+          "desc": "页面 = flight",
+          "status": "pass",
+          "expected": "flight",
+          "actual": "flight"
+        },
+        {
+          "id": "target",
+          "desc": "目标 = moon",
+          "status": "pass",
+          "expected": "moon",
+          "actual": "moon"
+        }
+      ],
+      "checkCounts": {
+        "pass": 6,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": [],
+      "evalResult": {
+        "screen": "flight",
+        "shopPage": 0,
+        "charCount": 9,
+        "charImages": 8,
+        "bgMeteors": 0,
+        "primary": "deepseek",
+        "target": "moon",
+        "legKm": 384400
+      },
+      "cdpErrors": [],
+      "cdpWarnings": [
+        {
+          "kind": "custom-scenario",
+          "message": "场景 \"v4qa-m-flight\" 不是内置 smoke/load，按通用流程处理（加载+等待+截图+报错收集）"
+        }
+      ],
+      "cdpReportPath": "reports/qa-v4-logs/m-flight.json"
+    },
+    {
+      "id": "static",
+      "title": "构建产物静态扫描（贴图 / 调试入口 / v4 参数 / 静态背景）",
+      "group": "static",
+      "status": "pass",
+      "durationMs": 0,
+      "screenshot": null,
+      "checks": [
+        {
+          "id": "version",
+          "desc": "index.html 内 VERSION = '4.x'",
+          "status": "pass",
+          "expected": "4.x",
+          "actual": "4.0.0"
+        },
+        {
+          "id": "chars-injected",
+          "desc": "CHARS 注入 8 位新角色立绘（deepseek 用 hero）",
+          "status": "pass",
+          "expected": "8",
+          "actual": 8
+        },
+        {
+          "id": "hero-injected",
+          "desc": "TEX 注入 hero（deepseek 立绘）",
+          "status": "pass",
+          "expected": "存在",
+          "actual": "存在"
+        },
+        {
+          "id": "star-injected",
+          "desc": "TEX 注入 star_* 恒星贴图 >= 10 张",
+          "status": "pass",
+          "expected": ">=10",
+          "actual": 13
+        },
+        {
+          "id": "shop-api",
+          "desc": "构建含 setShopPage 调试入口",
+          "status": "pass",
+          "expected": "存在",
+          "actual": "存在"
+        },
+        {
+          "id": "url-live",
+          "desc": "v4 URL 参数 live=1（固定实时时钟）",
+          "status": "pass",
+          "expected": "存在",
+          "actual": "存在"
+        },
+        {
+          "id": "url-time",
+          "desc": "v4 URL 参数 time=<ms>",
+          "status": "pass",
+          "expected": "存在",
+          "actual": "存在"
+        },
+        {
+          "id": "url-flight",
+          "desc": "v4 URL 参数 flight=1",
+          "status": "pass",
+          "expected": "存在",
+          "actual": "存在"
+        },
+        {
+          "id": "url-resume",
+          "desc": "v4 URL 参数 resume=1",
+          "status": "pass",
+          "expected": "存在",
+          "actual": "存在"
+        },
+        {
+          "id": "url-screen-solar",
+          "desc": "v4 URL 参数 screen=upgrade|solar",
+          "status": "pass",
+          "expected": "存在",
+          "actual": {
+            "solar": true,
+            "upgrade": true
+          }
+        },
+        {
+          "id": "bg-static",
+          "desc": "drawSpaceBg(t,warm,mode) 静态背景分支 + >=4 处 static 调用",
+          "status": "pass",
+          "expected": "实现",
+          "actual": {
+            "modeParam": true,
+            "staticCalls": 5
+          }
+        },
+        {
+          "id": "solar-map-live",
+          "desc": "太阳系地图使用 A.solarPositions 真实黄经",
+          "status": "pass",
+          "expected": "存在",
+          "actual": "存在"
+        },
+        {
+          "id": "save-key-v4",
+          "desc": "存档 key = fatfish_universe_save_v4",
+          "status": "pass",
+          "expected": "存在",
+          "actual": "存在"
+        }
+      ],
+      "checkCounts": {
+        "pass": 13,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": []
+    },
+    {
+      "id": "cross",
+      "title": "跨场景交叉断言（实时总航程 / 复现性 / 全场报错）",
+      "group": "cross",
+      "status": "pass",
+      "durationMs": 0,
+      "screenshot": null,
+      "checks": [
+        {
+          "id": "total-vary",
+          "desc": "?live=1 与 ?live=1&time=1900000000000 的实时总航程不同",
+          "status": "pass",
+          "expected": "两个时刻总航程不同",
+          "actual": {
+            "liveA": 14026385403.8,
+            "liveB": 14862218281.5
+          }
+        },
+        {
+          "id": "reproducible",
+          "desc": "固定 ?live=1 观测时刻可复现（两次运行总航程一致）",
+          "status": "pass",
+          "expected": "两次一致",
+          "actual": {
+            "probe": 14026385403.8,
+            "run": 14026385403.8
+          }
+        },
+        {
+          "id": "console-all",
+          "desc": "全部场景 console.error / 未捕获异常 = 0",
+          "status": "pass",
+          "expected": "0 个场景报错",
+          "actual": "0"
+        },
+        {
+          "id": "no-fail",
+          "desc": "无 fail 场景（pending / warn 不算失败）",
+          "status": "pass",
+          "expected": "0",
+          "actual": "0"
+        }
+      ],
+      "checkCounts": {
+        "pass": 4,
+        "fail": 0,
+        "pending": 0,
+        "warn": 0,
+        "info": 0
+      },
+      "failures": []
+    }
+  ]
+}
