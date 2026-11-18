@@ -1,0 +1,381 @@
+{
+  "project": "FatFish-Playable",
+  "version": "v4",
+  "owner": "char-art",
+  "updated": "2026-11-18",
+  "canvas": {
+    "w": 300,
+    "h": 400,
+    "format": "webp",
+    "background": "transparent",
+    "padding": "4% of content long edge",
+    "align": "horizontal-center / bottom"
+  },
+  "script": "assets/chars/process_chars.py",
+  "raw": "assets/chars/raw/<id>.png",
+  "processed": "assets/chars/raw/processed/<id>.png",
+  "chars": [
+    {
+      "key": "chatgpt",
+      "file": "assets/chars/chatgpt.webp",
+      "png": "assets/chars/raw/processed/chatgpt.png",
+      "w": 300,
+      "h": 400,
+      "bytes": 31566,
+      "displayName": "聊天酱",
+      "en": "ChatGPT",
+      "brandColor": "#10A37F",
+      "price": 1200,
+      "source": "user-supplied-portrait",
+      "sourceFile": "assets/chars/raw/chatgpt.png",
+      "sourceSha256": "2bac4838a2fdfe7d01de6e5453ccf74e8d5060e8e675808549ab7f751b9eb21e",
+      "sourceDims": [
+        537,
+        640
+      ],
+      "processing": {
+        "method": "alpha-keepalpha",
+        "tol": 18,
+        "bgColor": [
+          255,
+          255,
+          255
+        ],
+        "groundShadowPx": 0,
+        "contentBboxSrc": [
+          1,
+          1,
+          537,
+          640
+        ],
+        "padPx": 26,
+        "scale": 0.5102,
+        "webpQuality": 88,
+        "note": "白发龙角/调色盘+画笔/幼态三头身；原图自带透明底（alpha 模式）"
+      },
+      "note": "白发龙角/调色盘+画笔/幼态三头身；原图自带透明底（alpha 模式）"
+    },
+    {
+      "key": "claude",
+      "file": "assets/chars/claude.webp",
+      "png": "assets/chars/raw/processed/claude.png",
+      "w": 300,
+      "h": 400,
+      "bytes": 32248,
+      "displayName": "小星芒",
+      "en": "Claude",
+      "brandColor": "#D97757",
+      "price": 1800,
+      "source": "user-supplied-portrait",
+      "sourceFile": "assets/chars/raw/claude.png",
+      "sourceSha256": "6452189ecc6644ee130b4b594f7746b38bb45e14415f653dd62b6479bd6b22aa",
+      "sourceDims": [
+        573,
+        640
+      ],
+      "processing": {
+        "method": "alpha-keepalpha",
+        "tol": 18,
+        "bgColor": [
+          255,
+          255,
+          255
+        ],
+        "groundShadowPx": 0,
+        "contentBboxSrc": [
+          1,
+          1,
+          572,
+          639
+        ],
+        "padPx": 26,
+        "scale": 0.4815,
+        "webpQuality": 88,
+        "note": "橙发向日葵/抱书/幼态；原图自带透明底（alpha 模式）"
+      },
+      "note": "橙发向日葵/抱书/幼态；原图自带透明底（alpha 模式）"
+    },
+    {
+      "key": "gemini",
+      "file": "assets/chars/gemini.webp",
+      "png": "assets/chars/raw/processed/gemini.png",
+      "w": 300,
+      "h": 400,
+      "bytes": 37642,
+      "displayName": "双星喵",
+      "en": "Gemini",
+      "brandColor": "#A88BFF",
+      "price": 2600,
+      "source": "user-supplied-portrait",
+      "sourceFile": "assets/chars/raw/gemini.png",
+      "sourceSha256": "9f23ed43c4ad71ba0a95abcd339215b7818130285478cef3acedf499d798ef34",
+      "sourceDims": [
+        504,
+        640
+      ],
+      "processing": {
+        "method": "alpha-keepalpha",
+        "tol": 18,
+        "bgColor": [
+          255,
+          255,
+          255
+        ],
+        "groundShadowPx": 0,
+        "contentBboxSrc": [
+          1,
+          0,
+          504,
+          640
+        ],
+        "padPx": 26,
+        "scale": 0.5405,
+        "webpQuality": 88,
+        "note": "紫发猫耳/星星装饰/幼态；原图自带透明底（alpha 模式）"
+      },
+      "note": "紫发猫耳/星星装饰/幼态；原图自带透明底（alpha 模式）"
+    },
+    {
+      "key": "grok",
+      "file": "assets/chars/grok.webp",
+      "png": "assets/chars/raw/processed/grok.png",
+      "w": 300,
+      "h": 400,
+      "bytes": 33266,
+      "displayName": "格萝克",
+      "en": "Grok",
+      "brandColor": "#C9A227",
+      "price": 2900,
+      "source": "user-supplied-portrait",
+      "sourceFile": "assets/chars/raw/grok.png",
+      "sourceSha256": "b0af75fa21573ad38a5607492bcfe3db8fd3bc14b86fee0e7b3d9e8925291dac",
+      "sourceDims": [
+        893,
+        1600
+      ],
+      "processing": {
+        "method": "whitebg-floodfill",
+        "tol": 20,
+        "bgColor": [
+          255,
+          255,
+          255
+        ],
+        "groundShadowPx": 0,
+        "contentBboxSrc": [
+          11,
+          43,
+          893,
+          1529
+        ],
+        "padPx": 59,
+        "scale": 0.2494,
+        "webpQuality": 88,
+        "note": "金发双马尾/蝙蝠翼/黑红哥特裙/巨斧/全身；白底待幼态替换"
+      },
+      "note": "金发双马尾/蝙蝠翼/黑红哥特裙/巨斧/全身；白底待幼态替换"
+    },
+    {
+      "key": "kimi",
+      "file": "assets/chars/kimi.webp",
+      "png": "assets/chars/raw/processed/kimi.png",
+      "w": 300,
+      "h": 400,
+      "bytes": 25188,
+      "displayName": "月音酱",
+      "en": "Kimi",
+      "brandColor": "#8FB8FF",
+      "price": 3200,
+      "source": "user-supplied-portrait",
+      "sourceFile": "assets/chars/raw/kimi.png",
+      "sourceSha256": "9d67b6704c2add53f5ad45c1f0124079f2e39247a81f86ed9a28f74729725b6e",
+      "sourceDims": [
+        900,
+        1600
+      ],
+      "processing": {
+        "method": "whitebg-floodfill",
+        "tol": 12,
+        "bgColor": [
+          253,
+          253,
+          253
+        ],
+        "groundShadowPx": 19406,
+        "contentBboxSrc": [
+          71,
+          56,
+          900,
+          1592
+        ],
+        "padPx": 61,
+        "scale": 0.2413,
+        "webpQuality": 88,
+        "note": "银白蓝发/长笛礼服/全身；白底+白裙，tol 收紧到 12 防止白裙被泛洪吃掉；待幼态替换"
+      },
+      "note": "银白蓝发/长笛礼服/全身；白底+白裙，tol 收紧到 12 防止白裙被泛洪吃掉；待幼态替换"
+    },
+    {
+      "key": "glm",
+      "file": "assets/chars/glm.webp",
+      "png": "assets/chars/raw/processed/glm.png",
+      "w": 300,
+      "h": 400,
+      "bytes": 25254,
+      "displayName": "墨卷酱",
+      "en": "GLM",
+      "brandColor": "#6E7B9A",
+      "price": 3500,
+      "source": "user-supplied-portrait",
+      "sourceFile": "assets/chars/raw/glm.png",
+      "sourceSha256": "85890b3b8a777f26a6525d16d02bb816311f356f73647417f2bddf57b394b67a",
+      "sourceDims": [
+        900,
+        1600
+      ],
+      "processing": {
+        "method": "whitebg-floodfill",
+        "tol": 12,
+        "bgColor": [
+          253,
+          253,
+          253
+        ],
+        "groundShadowPx": 3534,
+        "contentBboxSrc": [
+          67,
+          69,
+          863,
+          1540
+        ],
+        "padPx": 59,
+        "scale": 0.2517,
+        "webpQuality": 88,
+        "note": "黑发狼耳/抱 GLM 书本/全身；白底+白裙，tol 收紧到 12；待幼态替换"
+      },
+      "note": "黑发狼耳/抱 GLM 书本/全身；白底+白裙，tol 收紧到 12；待幼态替换"
+    },
+    {
+      "key": "qwen",
+      "file": "assets/chars/qwen.webp",
+      "png": "assets/chars/raw/processed/qwen.png",
+      "w": 300,
+      "h": 400,
+      "bytes": 26618,
+      "displayName": "千问酱",
+      "en": "Qwen",
+      "brandColor": "#4A6BD8",
+      "price": 3800,
+      "source": "user-supplied-portrait",
+      "sourceFile": "assets/chars/raw/qwen.png",
+      "sourceSha256": "176dea0b4cb5af27b129ff884f66d0f4ec8d68fa2f2be3197acf40abbc6baa27",
+      "sourceDims": [
+        893,
+        1600
+      ],
+      "processing": {
+        "method": "whitebg-floodfill",
+        "tol": 20,
+        "bgColor": [
+          255,
+          255,
+          255
+        ],
+        "groundShadowPx": 0,
+        "contentBboxSrc": [
+          53,
+          44,
+          852,
+          1581
+        ],
+        "padPx": 61,
+        "scale": 0.2411,
+        "webpQuality": 88,
+        "note": "蓝发汉服/折扇/全身；白底；待幼态替换"
+      },
+      "note": "蓝发汉服/折扇/全身；白底；待幼态替换"
+    },
+    {
+      "key": "minimax",
+      "file": "assets/chars/minimax.webp",
+      "png": "assets/chars/raw/processed/minimax.png",
+      "w": 300,
+      "h": 400,
+      "bytes": 26800,
+      "displayName": "小麦克",
+      "en": "MiniMax",
+      "brandColor": "#FF8A5B",
+      "price": 4100,
+      "source": "user-supplied-portrait",
+      "sourceFile": "assets/chars/raw/minimax.png",
+      "sourceSha256": "d326f0c8e3cbd1b49d9f91035551cea6de469e424ce98b5193c73183d17f7602",
+      "sourceDims": [
+        893,
+        1600
+      ],
+      "processing": {
+        "method": "whitebg-floodfill",
+        "tol": 20,
+        "bgColor": [
+          255,
+          255,
+          255
+        ],
+        "groundShadowPx": 0,
+        "contentBboxSrc": [
+          57,
+          41,
+          879,
+          1572
+        ],
+        "padPx": 61,
+        "scale": 0.242,
+        "webpQuality": 88,
+        "note": "橙发记者帽/麦克风/MINIMAX 包/全身；白底；待幼态替换"
+      },
+      "note": "橙发记者帽/麦克风/MINIMAX 包/全身；白底；待幼态替换"
+    }
+  ],
+  "default": {
+    "key": "deepseek",
+    "file": "hero.png",
+    "png": null,
+    "w": 296,
+    "h": 394,
+    "bytes": 199126,
+    "displayName": "深海小鲸娘",
+    "en": "DeepSeek",
+    "brandColor": "#5AA9FF",
+    "price": 0,
+    "source": "user-supplied-hero",
+    "sourceFile": "hero.png",
+    "sourceSha256": "d30e9200504bddfb90440ec637b2495a466abc5b011829284793b7d4589ef11f",
+    "sourceDims": [
+      296,
+      394
+    ],
+    "processing": {
+      "method": "unchanged",
+      "note": "默认角色，原样复用 hero.png，未做任何改动"
+    },
+    "note": "默认角色；游戏缺省形象，继续使用 hero.png"
+  },
+  "preview": {
+    "file": "assets/chars/preview_compare.png",
+    "size": [
+      2424,
+      516
+    ],
+    "note": "9 人并排对比（deepseek=hero.png + 8 张处理结果），仅自检/审阅用，不参与构建"
+  },
+  "qa": {
+    "count": 8,
+    "totalBytes": 238582,
+    "maxBytes": 37642,
+    "limitBytes": 92160,
+    "allUnderLimit": true,
+    "rerun": "python assets/chars/process_chars.py --check"
+  },
+  "rerun": "python assets/chars/process_chars.py --only <id>   # 同名新图覆盖 assets/chars/raw/<id>.png 后",
+  "buildNote": "build/build.py 的 collect_chars() 需把白名单扩到 9 个 id（deepseek 用 TEX.hero），读取 assets/chars/<id>.webp；旧的 chatgpt.png/claude.png 已移到 assets/chars/raw/legacy/ 归档"
+}

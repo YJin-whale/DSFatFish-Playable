@@ -1,0 +1,418 @@
+[
+  {
+    "key": "chatgpt",
+    "input": "assets\\chars\\raw\\chatgpt.png",
+    "input_dims": [
+      537,
+      640
+    ],
+    "input_mode": "RGBA",
+    "input_sha256": "2bac4838a2fdfe7d01de6e5453ccf74e8d5060e8e675808549ab7f751b9eb21e",
+    "method": "alpha-keepalpha",
+    "tol": 18,
+    "ground_shadow_px": 0,
+    "bg_color": [
+      255,
+      255,
+      255
+    ],
+    "content_bbox_src": [
+      1,
+      1,
+      537,
+      640
+    ],
+    "content_size_src": [
+      536,
+      639
+    ],
+    "pad_px": 26,
+    "scale": 0.5102,
+    "canvas": [
+      300,
+      400
+    ],
+    "content_bbox_canvas": [
+      13,
+      60,
+      287,
+      387
+    ],
+    "alpha_coverage": 0.4791,
+    "semi_px": 5046,
+    "transparent_rgb_max": 255,
+    "webp": {
+      "path": "assets\\chars\\chatgpt.webp",
+      "bytes": 31566,
+      "quality": 88
+    },
+    "png": {
+      "path": "assets\\chars\\raw\\processed\\chatgpt.png",
+      "bytes": 156802
+    }
+  },
+  {
+    "key": "claude",
+    "input": "assets\\chars\\raw\\claude.png",
+    "input_dims": [
+      573,
+      640
+    ],
+    "input_mode": "RGBA",
+    "input_sha256": "6452189ecc6644ee130b4b594f7746b38bb45e14415f653dd62b6479bd6b22aa",
+    "method": "alpha-keepalpha",
+    "tol": 18,
+    "ground_shadow_px": 0,
+    "bg_color": [
+      255,
+      255,
+      255
+    ],
+    "content_bbox_src": [
+      1,
+      1,
+      572,
+      639
+    ],
+    "content_size_src": [
+      571,
+      638
+    ],
+    "pad_px": 26,
+    "scale": 0.4815,
+    "canvas": [
+      300,
+      400
+    ],
+    "content_bbox_canvas": [
+      12,
+      80,
+      288,
+      388
+    ],
+    "alpha_coverage": 0.4713,
+    "semi_px": 4733,
+    "transparent_rgb_max": 255,
+    "webp": {
+      "path": "assets\\chars\\claude.webp",
+      "bytes": 32248,
+      "quality": 88
+    },
+    "png": {
+      "path": "assets\\chars\\raw\\processed\\claude.png",
+      "bytes": 153983
+    }
+  },
+  {
+    "key": "gemini",
+    "input": "assets\\chars\\raw\\gemini.png",
+    "input_dims": [
+      504,
+      640
+    ],
+    "input_mode": "RGBA",
+    "input_sha256": "9f23ed43c4ad71ba0a95abcd339215b7818130285478cef3acedf499d798ef34",
+    "method": "alpha-keepalpha",
+    "tol": 18,
+    "ground_shadow_px": 0,
+    "bg_color": [
+      255,
+      255,
+      255
+    ],
+    "content_bbox_src": [
+      1,
+      0,
+      504,
+      640
+    ],
+    "content_size_src": [
+      503,
+      640
+    ],
+    "pad_px": 26,
+    "scale": 0.5405,
+    "canvas": [
+      300,
+      400
+    ],
+    "content_bbox_canvas": [
+      14,
+      40,
+      286,
+      386
+    ],
+    "alpha_coverage": 0.4809,
+    "semi_px": 6448,
+    "transparent_rgb_max": 255,
+    "webp": {
+      "path": "assets\\chars\\gemini.webp",
+      "bytes": 37642,
+      "quality": 88
+    },
+    "png": {
+      "path": "assets\\chars\\raw\\processed\\gemini.png",
+      "bytes": 177174
+    }
+  },
+  {
+    "key": "grok",
+    "input": "assets\\chars\\raw\\grok.png",
+    "input_dims": [
+      893,
+      1600
+    ],
+    "input_mode": "RGB",
+    "input_sha256": "b0af75fa21573ad38a5607492bcfe3db8fd3bc14b86fee0e7b3d9e8925291dac",
+    "method": "whitebg-floodfill",
+    "tol": 20,
+    "ground_shadow_px": 0,
+    "bg_color": [
+      255,
+      255,
+      255
+    ],
+    "content_bbox_src": [
+      11,
+      43,
+      893,
+      1529
+    ],
+    "content_size_src": [
+      882,
+      1486
+    ],
+    "pad_px": 59,
+    "scale": 0.2494,
+    "canvas": [
+      300,
+      400
+    ],
+    "content_bbox_canvas": [
+      39,
+      15,
+      260,
+      386
+    ],
+    "alpha_coverage": 0.4263,
+    "semi_px": 5365,
+    "transparent_rgb_max": 255,
+    "webp": {
+      "path": "assets\\chars\\grok.webp",
+      "bytes": 33266,
+      "quality": 88
+    },
+    "png": {
+      "path": "assets\\chars\\raw\\processed\\grok.png",
+      "bytes": 155373
+    }
+  },
+  {
+    "key": "kimi",
+    "input": "assets\\chars\\raw\\kimi.png",
+    "input_dims": [
+      900,
+      1600
+    ],
+    "input_mode": "RGB",
+    "input_sha256": "9d67b6704c2add53f5ad45c1f0124079f2e39247a81f86ed9a28f74729725b6e",
+    "method": "whitebg-floodfill",
+    "tol": 12,
+    "ground_shadow_px": 19406,
+    "bg_color": [
+      253,
+      253,
+      253
+    ],
+    "content_bbox_src": [
+      71,
+      56,
+      900,
+      1592
+    ],
+    "content_size_src": [
+      829,
+      1536
+    ],
+    "pad_px": 61,
+    "scale": 0.2413,
+    "canvas": [
+      300,
+      400
+    ],
+    "content_bbox_canvas": [
+      49,
+      14,
+      250,
+      386
+    ],
+    "alpha_coverage": 0.3593,
+    "semi_px": 3589,
+    "transparent_rgb_max": 255,
+    "webp": {
+      "path": "assets\\chars\\kimi.webp",
+      "bytes": 25188,
+      "quality": 88
+    },
+    "png": {
+      "path": "assets\\chars\\raw\\processed\\kimi.png",
+      "bytes": 131328
+    }
+  },
+  {
+    "key": "glm",
+    "input": "assets\\chars\\raw\\glm.png",
+    "input_dims": [
+      900,
+      1600
+    ],
+    "input_mode": "RGB",
+    "input_sha256": "85890b3b8a777f26a6525d16d02bb816311f356f73647417f2bddf57b394b67a",
+    "method": "whitebg-floodfill",
+    "tol": 12,
+    "ground_shadow_px": 3534,
+    "bg_color": [
+      253,
+      253,
+      253
+    ],
+    "content_bbox_src": [
+      67,
+      69,
+      863,
+      1540
+    ],
+    "content_size_src": [
+      796,
+      1471
+    ],
+    "pad_px": 59,
+    "scale": 0.2517,
+    "canvas": [
+      300,
+      400
+    ],
+    "content_bbox_canvas": [
+      50,
+      15,
+      250,
+      385
+    ],
+    "alpha_coverage": 0.3559,
+    "semi_px": 3428,
+    "transparent_rgb_max": 255,
+    "webp": {
+      "path": "assets\\chars\\glm.webp",
+      "bytes": 25254,
+      "quality": 88
+    },
+    "png": {
+      "path": "assets\\chars\\raw\\processed\\glm.png",
+      "bytes": 129799
+    }
+  },
+  {
+    "key": "qwen",
+    "input": "assets\\chars\\raw\\qwen.png",
+    "input_dims": [
+      893,
+      1600
+    ],
+    "input_mode": "RGB",
+    "input_sha256": "176dea0b4cb5af27b129ff884f66d0f4ec8d68fa2f2be3197acf40abbc6baa27",
+    "method": "whitebg-floodfill",
+    "tol": 20,
+    "ground_shadow_px": 0,
+    "bg_color": [
+      255,
+      255,
+      255
+    ],
+    "content_bbox_src": [
+      53,
+      44,
+      852,
+      1581
+    ],
+    "content_size_src": [
+      799,
+      1537
+    ],
+    "pad_px": 61,
+    "scale": 0.2411,
+    "canvas": [
+      300,
+      400
+    ],
+    "content_bbox_canvas": [
+      53,
+      14,
+      247,
+      386
+    ],
+    "alpha_coverage": 0.3596,
+    "semi_px": 3822,
+    "transparent_rgb_max": 255,
+    "webp": {
+      "path": "assets\\chars\\qwen.webp",
+      "bytes": 26618,
+      "quality": 88
+    },
+    "png": {
+      "path": "assets\\chars\\raw\\processed\\qwen.png",
+      "bytes": 132935
+    }
+  },
+  {
+    "key": "minimax",
+    "input": "assets\\chars\\raw\\minimax.png",
+    "input_dims": [
+      893,
+      1600
+    ],
+    "input_mode": "RGB",
+    "input_sha256": "d326f0c8e3cbd1b49d9f91035551cea6de469e424ce98b5193c73183d17f7602",
+    "method": "whitebg-floodfill",
+    "tol": 20,
+    "ground_shadow_px": 0,
+    "bg_color": [
+      255,
+      255,
+      255
+    ],
+    "content_bbox_src": [
+      57,
+      41,
+      879,
+      1572
+    ],
+    "content_size_src": [
+      822,
+      1531
+    ],
+    "pad_px": 61,
+    "scale": 0.242,
+    "canvas": [
+      300,
+      400
+    ],
+    "content_bbox_canvas": [
+      50,
+      14,
+      249,
+      386
+    ],
+    "alpha_coverage": 0.252,
+    "semi_px": 6109,
+    "transparent_rgb_max": 255,
+    "webp": {
+      "path": "assets\\chars\\minimax.webp",
+      "bytes": 26800,
+      "quality": 88
+    },
+    "png": {
+      "path": "assets\\chars\\raw\\processed\\minimax.png",
+      "bytes": 117073
+    }
+  }
+]

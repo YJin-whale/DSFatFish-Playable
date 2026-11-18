@@ -1,0 +1,240 @@
+{
+  "alpha_cen": {
+    "w": 256,
+    "h": 256,
+    "mode": "RGBA",
+    "bytes": 48718,
+    "alpha_mean": 0.1834,
+    "opaque_ratio": 0.1491,
+    "nonempty_ratio": 0.5031,
+    "border_alpha_max": 0.0,
+    "corner_alpha_max": 0.0,
+    "rgb_mean": [
+      0.929,
+      0.811,
+      0.587
+    ],
+    "disk_frac": 0.44,
+    "halo_reach": 0.965,
+    "rays": 6
+  },
+  "barnard": {
+    "w": 256,
+    "h": 256,
+    "mode": "RGBA",
+    "bytes": 28001,
+    "alpha_mean": 0.1053,
+    "opaque_ratio": 0.0943,
+    "nonempty_ratio": 0.1707,
+    "border_alpha_max": 0.0,
+    "corner_alpha_max": 0.0,
+    "rgb_mean": [
+      0.905,
+      0.624,
+      0.266
+    ],
+    "disk_frac": 0.352,
+    "halo_reach": 0.72,
+    "rays": 4
+  },
+  "wolf359": {
+    "w": 256,
+    "h": 256,
+    "mode": "RGBA",
+    "bytes": 24610,
+    "alpha_mean": 0.0994,
+    "opaque_ratio": 0.091,
+    "nonempty_ratio": 0.145,
+    "border_alpha_max": 0.0,
+    "corner_alpha_max": 0.0,
+    "rgb_mean": [
+      0.903,
+      0.594,
+      0.225
+    ],
+    "disk_frac": 0.345,
+    "halo_reach": 0.69,
+    "rays": 0
+  },
+  "sirius": {
+    "w": 256,
+    "h": 256,
+    "mode": "RGBA",
+    "bytes": 44653,
+    "alpha_mean": 0.1934,
+    "opaque_ratio": 0.1644,
+    "nonempty_ratio": 0.3813,
+    "border_alpha_max": 0.0,
+    "corner_alpha_max": 0.0,
+    "rgb_mean": [
+      0.74,
+      0.835,
+      0.963
+    ],
+    "disk_frac": 0.462,
+    "halo_reach": 0.98,
+    "rays": 8
+  },
+  "eps_eri": {
+    "w": 256,
+    "h": 256,
+    "mode": "RGBA",
+    "bytes": 44780,
+    "alpha_mean": 0.1639,
+    "opaque_ratio": 0.1356,
+    "nonempty_ratio": 0.4042,
+    "border_alpha_max": 0.0,
+    "corner_alpha_max": 0.0,
+    "rgb_mean": [
+      0.921,
+      0.734,
+      0.434
+    ],
+    "disk_frac": 0.42,
+    "halo_reach": 0.955,
+    "rays": 6
+  },
+  "procyon": {
+    "w": 256,
+    "h": 256,
+    "mode": "RGBA",
+    "bytes": 49574,
+    "alpha_mean": 0.1954,
+    "opaque_ratio": 0.155,
+    "nonempty_ratio": 0.5623,
+    "border_alpha_max": 0.0,
+    "corner_alpha_max": 0.0,
+    "rgb_mean": [
+      0.942,
+      0.891,
+      0.794
+    ],
+    "disk_frac": 0.448,
+    "halo_reach": 0.972,
+    "rays": 8
+  },
+  "tau_cet": {
+    "w": 256,
+    "h": 256,
+    "mode": "RGBA",
+    "bytes": 45388,
+    "alpha_mean": 0.1698,
+    "opaque_ratio": 0.1397,
+    "nonempty_ratio": 0.4357,
+    "border_alpha_max": 0.0,
+    "corner_alpha_max": 0.0,
+    "rgb_mean": [
+      0.929,
+      0.784,
+      0.527
+    ],
+    "disk_frac": 0.426,
+    "halo_reach": 0.958,
+    "rays": 6
+  },
+  "altair": {
+    "w": 256,
+    "h": 256,
+    "mode": "RGBA",
+    "bytes": 41010,
+    "alpha_mean": 0.1813,
+    "opaque_ratio": 0.1517,
+    "nonempty_ratio": 0.3911,
+    "border_alpha_max": 0.0,
+    "corner_alpha_max": 0.0,
+    "rgb_mean": [
+      0.883,
+      0.905,
+      0.936
+    ],
+    "disk_frac": 0.444,
+    "halo_reach": 0.972,
+    "rays": 8
+  },
+  "vega": {
+    "w": 256,
+    "h": 256,
+    "mode": "RGBA",
+    "bytes": 44076,
+    "alpha_mean": 0.1907,
+    "opaque_ratio": 0.1627,
+    "nonempty_ratio": 0.3684,
+    "border_alpha_max": 0.0,
+    "corner_alpha_max": 0.0,
+    "rgb_mean": [
+      0.712,
+      0.819,
+      0.964
+    ],
+    "disk_frac": 0.46,
+    "halo_reach": 0.978,
+    "rays": 8
+  },
+  "arcturus": {
+    "w": 256,
+    "h": 256,
+    "mode": "RGBA",
+    "bytes": 57406,
+    "alpha_mean": 0.2339,
+    "opaque_ratio": 0.1669,
+    "nonempty_ratio": 0.6501,
+    "border_alpha_max": 0.0,
+    "corner_alpha_max": 0.0,
+    "rgb_mean": [
+      0.921,
+      0.687,
+      0.348
+    ],
+    "disk_frac": 0.465,
+    "halo_reach": 0.995,
+    "rays": 4
+  },
+  "sun": {
+    "w": 256,
+    "h": 256,
+    "mode": "RGBA",
+    "bytes": 53361,
+    "alpha_mean": 0.2177,
+    "opaque_ratio": 0.19,
+    "nonempty_ratio": 0.33,
+    "border_alpha_max": 0.0,
+    "corner_alpha_max": 0.0,
+    "rgb_mean": [
+      0.756,
+      0.574,
+      0.061
+    ]
+  },
+  "galactic_center": {
+    "w": 256,
+    "h": 256,
+    "mode": "RGBA",
+    "bytes": 23317,
+    "alpha_mean": 0.2741,
+    "opaque_ratio": 0.2623,
+    "nonempty_ratio": 0.2855,
+    "border_alpha_max": 0.0,
+    "corner_alpha_max": 0.0,
+    "rgb_mean": [
+      0.972,
+      0.595,
+      0.155
+    ]
+  },
+  "galactic_edge": {
+    "w": 256,
+    "h": 256,
+    "mode": "RGBA",
+    "bytes": 82640,
+    "alpha_mean": 0.1043,
+    "opaque_ratio": 0.0,
+    "nonempty_ratio": 0.6322,
+    "border_alpha_max": 0.0,
+    "corner_alpha_max": 0.0,
+    "rgb_mean": [
+      0.884,
+      0.924,
+      0.976
+    ]
+  }
+}
