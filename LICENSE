@@ -1,0 +1,45 @@
+MIT License
+
+Copyright (c) 2026 FatFish-Playable contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+素材授权说明（不适用 MIT 的部分）
+
+本 MIT 许可只覆盖本仓库中的**源代码、构建脚本与文档**（例如 src/、build/、
+tools/、docs/、reports/ 下的文本文件以及构建产物 index.html 中的代码部分）。
+
+`assets/` 下的图像素材（行星 / 恒星 / 星系贴图）、内置音乐（`assets/audio/*.mp3`）、
+根目录的 `hero.png` 以及各角色立绘**不是**本项目原创或并非以 MIT 发布，它们保留各自
+原作者的授权，详见根目录 `NOTICE.md`：
+
+- 行星贴图：Solar System Scope（CC BY 4.0）等；
+- NASA / ESA / EHT 观测图像：公共领域或 CC BY 4.0（使用 EHT 图像必须保留
+  "Credit: EHT Collaboration"）；
+- 内置音乐：第三方作品，版权归原权利人（罐装毕加索 / 星落落oi），仅非商业使用，
+  公开再分发前需自行取得授权；
+- 角色立绘：用户提供的 AI 生成图，其中默认角色（DeepSeek 娘）原形象授权为
+  **CC BY-NC-SA 4.0（非商业）**。
+
+因此，**如果整体再分发本仓库（含 assets/），必须同时遵守 `NOTICE.md` 中的
+署名与非商业限制**；只使用代码（src/、build/、tools/）时，MIT 许可即足够。
+
+本项目是非官方、非商业的粉丝向 / 同人作品，与任何 AI 公司无关。
+================================================================================

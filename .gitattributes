@@ -1,0 +1,44 @@
+# =============================================================================
+# 肥鱼跳宇宙（FatFish-Playable）· Git 属性
+# 目的：跨平台（Windows / macOS / Linux）协作时统一行尾，避免无意义的 CRLF diff；
+#       同时让 GitHub 正确识别语言统计与二进制文件，并对图片 / 字体做二进制标记。
+# =============================================================================
+
+# 默认：自动识别文本，统一以 LF 入库
+* text=auto eol=lf
+
+# 明确文本类型（保留 LF；.ps1 按 Windows 习惯使用 CRLF）
+*.md      text eol=lf
+*.txt     text eol=lf
+*.json    text eol=lf
+*.js      text eol=lf
+*.mjs     text eol=lf
+*.cjs     text eol=lf
+*.py      text eol=lf
+*.html    text eol=lf
+*.htm     text eol=lf
+*.css     text eol=lf
+*.yml     text eol=lf
+*.yaml    text eol=lf
+*.sh      text eol=lf
+*.ps1     text eol=crlf
+
+# 二进制文件（禁止行尾转换 / 文本 diff）
+*.png     binary
+*.jpg     binary
+*.jpeg    binary
+*.webp    binary
+*.gif     binary
+*.ico     binary
+*.bmp     binary
+*.pdf     binary
+*.zip     binary
+*.7z      binary
+*.rar     binary
+*.woff    binary
+*.woff2   binary
+*.ttf     binary
+*.otf     binary
+
+# 构建产物按普通文本处理，但不要在 GitHub 上按语言统计（避免 JS 占比失真）
+index.html  linguist-documentation

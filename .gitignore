@@ -1,0 +1,74 @@
+# =============================================================================
+# 肥鱼跳宇宙（FatFish-Playable）· Git 忽略规则
+#
+# 原则：
+#   1) 提交进来的是「能复现这个游戏」的最小集合：源码、构建脚本、素材源文件、
+#      成品贴图、文档与报告；
+#   2) 不提交「能一键重新生成」的中间产物、QA 临时截图/日志、本机环境遗留文件；
+#   3) assets/tex/raw/ 与 assets/chars/raw/ 是素材源文件，**保留跟踪**（约 17 MB），
+#      没有它们就无法复现贴图生成流程。
+# =============================================================================
+
+# ---------------------------------------------------------------- Python / 解释器缓存
+# 构建脚本与素材处理脚本都是 Python，跑一次就会生成 __pycache__
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+
+# ---------------------------------------------------------------- 操作系统 / 编辑器杂项
+.DS_Store
+._*
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+
+# ---------------------------------------------------------------- QA 临时产物（体积大、可重跑）
+# reports/shots/ 是每轮 QA 的截图输出（v4 / v5 / v6 各轮，单轮上百 MB）；
+# 重跑 tools/qa_v6_run.mjs、qa_v5_run.mjs 或 qa_v4_run.mjs 即可重建。仓库里只保留精选后的 docs/screenshots/。
+reports/shots/
+# cdp_check 的逐场景 JSON 日志与 headless Chrome profile（v4/v5/v6 各自的 logs 与 _qa-*profile），
+# 均可由 QA 脚本重新生成
+reports/qa-*-logs/
+reports/_qa*/
+# 逐场景 JSON 结果（一场景一个文件，属临时日志）；只保留汇总后的机器可读报告
+reports/qa-*.json
+!reports/qa-v4-run.json
+!reports/qa-v5-run.json
+!reports/qa-v6-run.json
+# tools/ 下以下划线开头的临时脚本（QA 探针 / 静态扫描小工具，可删）；
+# 正式回归执行器是 tools/qa_v*_run.mjs，会正常提交
+tools/_*
+
+# ---------------------------------------------------------------- 构建中间产物
+# 贴图生成流水线的中间文件（编码试验 / 预览 / 下载原图缓存），成品在 assets/tex/*.png
+assets/tex/_build/
+# 音频：成品 mp3（两首内置曲目，合计约 3.9 MB）随仓库提交并内联进 index.html；
+# 用户提供的原始未压缩 mp3（约 13.4 MB）只在 assets/audio/raw/，不内联、不入库
+assets/audio/raw/
+# build/ 下两张「素材缺货时」的兜底贴图，正常构建不会用到，产物里已有真实贴图
+build/*.png
+build/bg_milkyway.jpg
+# 幼态图草稿：用户确认前的生成稿，命名固定后同名覆盖 assets/chars/raw/<id>.png 才会进构建
+assets/chars/raw/chibi_drafts/
+
+# ---------------------------------------------------------------- 根目录 v3 开发期遗留素材
+# 这些是「星球分层 / 预览图」调试产物和改版前原版备份，不参与当前构建（index.html 为最终产物）。
+# 需要对照原版时可在历史版本说明 README-肥鱼跳宇宙-v3.md 中查找线索。
+layer-*.png
+preview-*.png
+layers-overview.png
+index_original_backup.html
+
+# ---------------------------------------------------------------- 打包 / 临时文件
+*.zip
+*.7z
+*.rar
+*.tar
+*.gz
+*.tmp
+*.log
